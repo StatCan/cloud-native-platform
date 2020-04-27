@@ -182,11 +182,21 @@ MinIO provides an S3-compatible API to access data stored locally or within an A
 
 What can you do it with / what have we done with it?
 
-* Expose acccess to data stored in an Azure Blob storage account via an S3-compatible API
-  * Available for use within Kubeflow pipelines and from Jupyter notebooks
+* Built and deployed through GitHub Actions
+* Expose acccess to data stored in multiple types of backends (cloud, local) via an S3-compatible API
+* Available for use within Kubeflow pipelines and from Jupyter notebooks
 * Basic SQL-like access to data files
-* Intend to provide a MinIO service for each project backed by an Azure Storage account
-  * Leverage the MinIO operator for MinIO lifecycle management
+* MinIO platform configuration leveraging the Minio Operator, Kustomize and OPA
+  * Multiple tenants backed by multiple drives in a distributed fashion (erasure code)
+  * Lifecycle management handled via automated snapshots (velero) and backups (mc mirror)
+  * Integrated with OIDC linked to Azure Tenant via MinIO Security Token Service
+  * Authorization and access to different types of buckets done through the Open Policy Agent
+
+Different types of tenants:
+
+* Minimal (Default)
+* Application Level (High Storage)
+* Premium (SSD and improved IOPS)
 
 ![minio api](/images/daaas/minio_api.png "Jupyter notebook interacting with MinIO")
 
@@ -321,6 +331,22 @@ The above picture demonstrates the action which builds and deploys the Dremio ap
 * https://github.com/StatCan/dremio/actions
 * https://github.com/StatCan/charts/tree/master/stable/dremio
 
+## Vault
+
+![vault ui](/images/daaas/vault_ui.png "Vault UI")
+
+Launched Vault alongside with its web ui to provide a centralized place to secure, store and tightly control access to tokens, passwords, and certificates.
+
+What can you do it with / what have we done with it?
+
+* Vault injector with Azure AD is setup to provide access credentials for both Kubeflow and Jupyter Notebooks
+* AAD Pod Identity enables Kubernetes applications to access cloud resources securely with Azure Active Directory (AAD)
+* Authentication is setup using managed identities (MSI) for Azure resources
+
+### Source Code
+
+* https://github.com/StatCan/terraform-vault (private)
+
 ## Important Links
 
 ### Resources
@@ -354,6 +380,7 @@ The above picture demonstrates the action which builds and deploys the Dremio ap
 * https://github.com/StatCan/mlflow
 * https://github.com/StatCan/shiny
 * https://github.com/StatCan/statcan.orchardcore
+* https://github.com/StatCan/terraform-vault (private)
 
 #### GitHub Actions
 
