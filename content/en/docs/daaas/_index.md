@@ -331,6 +331,22 @@ The above picture demonstrates the action which builds and deploys the Dremio ap
 * https://github.com/StatCan/dremio/actions
 * https://github.com/StatCan/charts/tree/master/stable/dremio
 
+## Pachyderm
+
+Launched Pachyderm a data science platform that combines Data Lineage with End-to-End Pipelines on Kubernetes
+
+What can you do it with / what have we done with it?
+
+* Launched Pachyderm to AKS via GitHub Actions
+* Leverages Azure storage for its object store (backing data)
+* Pachyderm's S3 Gateway can now be used as a sidecar to Kubeflow pipelines
+* Kubeflow now can leverage Pachyderm’s powerful data versioning and lineage capabilities
+
+### Source Code
+
+* https://github.com/StatCan/pachyderm
+* https://github.com/StatCan/pachyderm/actions
+
 ## Vault
 
 ![vault ui](/images/daaas/vault_ui.png "Vault UI")
@@ -378,6 +394,7 @@ What can you do it with / what have we done with it?
 * https://github.com/StatCan/kubeflow-github-action
 * https://github.com/StatCan/kubeflow-manifest
 * https://github.com/StatCan/mlflow
+* https://github.com/StatCan/pachyderm
 * https://github.com/StatCan/shiny
 * https://github.com/StatCan/statcan.orchardcore
 * https://github.com/StatCan/terraform-vault (private)
@@ -392,6 +409,7 @@ What can you do it with / what have we done with it?
 * https://github.com/StatCan/kubeflow-controller/actions
 * https://github.com/StatCan/kubeflow-github-action/actions
 * https://github.com/StatCan/mlflow/actions
+* https://github.com/StatCan/pachyderm/actions
 * https://github.com/StatCan/shiny/actions
 * https://github.com/StatCan/StatCan.OrchardCore/actions
 * https://github.com/StatCan/terraform-kubernetes-aks-daaas-private/actions (private)
@@ -414,3 +432,4 @@ What can you do it with / what have we done with it?
 * https://kubeflow.org/docs/started/getting-started/
 * https://towardsdatascience.com/tagged/kubernetes
 * https://medium.com/kredaro-engineering/ai-tales-building-machine-learning-pipeline-using-kubeflow-and-minio-4b88da30437b
+* https://pachyderm.com/blog/pachyderm-1-10-s3-gateway-expansion-brings-support-for-kubeflow/
