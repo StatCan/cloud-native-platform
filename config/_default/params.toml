@@ -1,0 +1,134 @@
+# Cloud Native Platform for Government DEFAULT Site Params
+# Default site parameters, see "config/production" "config/staging" and "config/local" for environment specific overrides
+
+########################
+# Default site parameters
+
+# GitHub branch (latest release)
+latest_github_branch = "release-0.1"
+# Default version (latest release)
+version = "v0.1"
+########################
+
+# Section labels for versions
+# Current release
+doclabel = "Documentation "
+releaselabel = "Release: "
+# Pre-release
+masterlabel = "Pre-release"
+# section path value ("master" docs directory folder on website)
+masterfolder = "development"
+
+# Footer content
+govcloudAuthors = "Statistics Canada"
+commonsLicense = "Creative Commons Attribution 4.0"
+commons_license = "https://creativecommons.org/licenses/by/4.0/"
+apacheLicense = "Apache 2.0"
+apache_license = "https://www.apache.org/licenses/LICENSE-2.0"
+govcloudLicense = "Licensing"
+govcloud_license = "https://github.com/statcan/cloud-native-platform/blob/master/LICENSE"
+privacyPolicy = "Privacy Policy"
+privacy_policy = "https://statcan.gc.ca/eng/reference/privacy"
+
+# GitHub repositories
+github_docsrepo = "https://github.com/statcan/cloud-native-platform"
+github_communityrepo = "https://github.com/statcan/cloud-native-platform"
+
+# User interface configuration
+[ui]
+# Set to true to display the nav bar in compact state (collapse menu).
+sidebar_menu_compact = true
+#  Set to true to disable breadcrumb navigation.
+breadcrumb_disable = false
+
+[links]
+# End user relevant links. These will show up on left side of footer and in the community page if you have one.
+[[links.user]]
+  name = "GC Message"
+  url = "https://message.gccollab.ca"
+  external = "true"
+  icon = "fab fa-slack"
+  desc = "Chat with project contributors internal to government"
+[[links.user]]
+  name = "GC Collab"
+  url = "https://account.gccollab.ca"
+  external = "true"
+  icon = "fas fa-users"
+  desc = "Collaboration and networking with experts, partners and contributors"
+[[links.user]]
+  name ="Digital Academy"
+  url = "https://csps-efpc.gc.ca"
+  external = "true"
+  icon = "fas fa-chalkboard-teacher fa-sm"
+  desc = "Watch and follow our Digital Academy course on cloud native"
+
+# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+[[links.developer]]
+  name = "Slack channels"
+  url = "https://stats-cloud.slack.com/"
+  external = "true"
+  icon = "fab fa-slack"
+  desc = "Chat with project contributors"
+[[links.developer]]
+  name = "GitHub organization"
+  url = "https://github.com/canada-ca-terraform-modules"
+  external = "true"
+  icon = "fab fa-github"
+  desc = "Where the development often takes place here"
+[[links.developer]]
+  name = "YouTube channel"
+  url = "https://youtube.com/channel/UC00nN9hhb4q6IChP8yEIzGA"
+  external = "true"
+  icon = "fab fa-youtube"
+  desc = "Watch us on YouTube"
+
+# Community page links.
+[[links.usecode]]
+  name = "Container Basics"
+  url = "https://katacoda.com/statcan/courses/container-basics"
+  external = "false"
+  icon = "fa fa-code"
+  desc = " A high level overview of Containers"
+[[links.usecode]]
+  name = "Infrastructure as Code"
+  url = "https://katacoda.com/statcan/courses/infrastructure-as-code"
+  external = "false"
+  icon = "fa fa-code"
+  desc = " A high level overview of Infrastructure as Code"
+[[links.usecode]]
+  name = "Kubernetes Fundamentals 1"
+  url = "https://katacoda.com/statcan/courses/kubernetes-fundamentals-1"
+  external = "false"
+  icon = "fa fa-code"
+  desc = "Basic concepts such as Pods, replicas, and different types of Deployment strategies"
+[[links.usecode]]
+  name = "Kubernetes Fundamentals 2"
+  url = "https://katacoda.com/statcan/courses/kubernetes-fundamentals-2"
+  external = "false"
+  icon = "fa fa-code"
+  desc = "Advanced concepts such as Services, Configmaps, Secrets, and Persistent Volumes"
+[[links.usecode]]
+  name = "Kubernetes CNCF"
+  url = "https://katacoda.com/statcan/courses/kubernetes-cncf"
+  external = "false"
+  icon = "fa fa-code"
+  desc = "An overview of some of the more popular CNCF projects"
+[[links.usecode]]
+  name = "All"
+  url = "https://katacoda.com/statcan"
+  external = "false"
+  icon = "fa fa-list"
+  desc = "See a list of all KataCoda Scenarios"
+
+[[links.sharecode]]
+  name = "Contribute KataCoda scenarios"
+  url = "https://github.com/statcan/katacoda-courses"
+  external = "false"
+  icon = "fa fa-share"
+  desc = "Fork and then contribute back KataCoda scenarios"
+[[links.sharecode]]
+  name = "Link to KataCoda documentation"
+  url = "https://katacoda.com/docs"
+  external = "false"
+  icon = "fa fa-link"
+  desc = "Documentation on how to write a KataCoda scenario"

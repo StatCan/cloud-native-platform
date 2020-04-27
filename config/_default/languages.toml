@@ -1,0 +1,25 @@
+# Cloud Native Platform for Government Language Configuration
+
+[en]
+  title = "Cloud Native Platform"
+  description = "This user guide is for the teams who deployed their applications in Statistics Canada Cloud platform or want/migrate to deploy and manage their applications on the cloud platform."
+  languageName = "English"
+  contentDir = "content/en"
+  # Weight used for sorting.
+  weight = 1
+  time_format_default = "02.01.2006"
+  time_format_blog = "02.01.2006"
+
+# Template/example for additional NLs
+# (where translated source is "content/[LANG]" and config file is "il8n/[LANG].toml")
+#
+# Example: LANG = fr (French):
+#
+# [fr]
+#   title = "Cloud Native Platform"
+#   description = "Cloud Native Platform [fr translation here]"
+#   languageName = "French"
+#   contentDir = "content/fr"
+#   weight = 2
+#   time_format_default = "2006.02.01"
+#   time_format_blog = "2006.02.01"

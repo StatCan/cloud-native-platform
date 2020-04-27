@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<section class="row td-box">
+	<div class="col-md-1 order-md-1 hidden-xs hidden-sm hidden-md"></div>
+	<div class="col-md-3 col-lg-1 order-xs-first order-sm-first order-md-last text-center "></div>
+	<div class="col-md-7 col-lg-8 order-xs-2 order-sm-2 order-md-2">
+		<h1>Join the community</h1>
+		<p class="lead mt-2">The {{ .Site.Title }} is an open source project that while focuses on the Canadian
+			government anyone in the public can freely use, learn upon, and extend to fit their needs.</p>
+		<p class="lead mt-2">The links provided below highlight the ways you can find out what is happening and how you
+			can get involved.</p>
+	</div>
+</section>
+
+{{ partial "community_links.html" . }}
+
+{{ end }}

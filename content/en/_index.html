@@ -1,0 +1,192 @@
++++
+title = "Cloud Native Platform for Government"
++++
+
+<!-- td-box--{{ $col_id }} td-box--gradient td-box--height-{{ $height }} -->
+<section class="row td-box">
+	<div class="col-md-1 order-md-1 hidden-xs hidden-sm hidden-md"></div>
+	<div class="col-md-3 col-lg-2 order-xs-first order-sm-first order-md-last text-center ">
+		{{< icon "logo.svg" >}}
+	</div>
+	<div class="col-md-6 col-lg-7 order-xs-2 order-sm-2 order-md-2">
+		<h1>Who is this user guide for?</h1>
+		<p class="lead mt-2">This user guide is for project teams who have deployed their applications onto
+			the cloud native platform for government and/or want to migrate, deploy and manage
+			applications on top of it. Documentation will be provided about the platform itself
+			as well as how to manage the infrastructure and utilize the common tooling.</p>
+		<div class="mx-auto mt-5">
+			<a class="btn btn-lg btn-primary mr-3 mb-4" href="{{< relref "/docs" >}}">
+				Learn More <i class="fas fa-arrow-alt-circle-right ml-2"></i>
+			</a>
+			<a class="btn btn-lg btn-secondary mr-3 mb-4" href="https://github.com/statcan/cloud-native-platform">
+				View Repository <i class="fab fa-github ml-2 "></i>
+			</a>
+		</div>
+	</div>
+</section>
+
+<section class="row td-box td-box--0">
+	<div class="col">
+		<div class="row">
+			<div class="col-md-1 hidden-xs hidden-sm"></div>
+			<div class="col-10">
+				<h2>Modern service delivery for Canadians</h2>
+				<p>The cloud native platform for government is built on top of open source Kubernetes primarily
+					leveraging projects from the Cloud Native Computing Foundation (CNCF). Built from experience running
+					as close as possible to open source Kubernetes while codifying the best practices shared by
+					successful real-world implementations. This can be seen as a reference architecture where we strive
+					to solve the difficult parts of deploying and managing cloud native services for government.</p>
+				<div>&nbsp;</div>
+				<h3>Highlights</h3>
+				<ul class="fa-ul">
+					<li><span class="fa-li"><i class="fas fa-check"></i></span>Each component solves a specific problem
+						related to a specific use case.</li>
+					<li><span class="fa-li"><i class="fas fa-check"></i></span>Pluggable components let you bring your
+						own logging and monitoring, networking, and service mesh.</li>
+					<li><span class="fa-li"><i class="fas fa-check"></i></span>Tested and used against common tools and
+						frameworks such as Java, NodeJS, Python, and many more.</li>
+					<li><span class="fa-li"><i class="fas fa-check"></i></span>Stand up a scalable, secure, and
+						distributed service in seconds.</li>
+					<li><span class="fa-li"><i class="fas fa-check"></i></span>Ability to run anywhere Kubernetes runs,
+						without worry about vendor lock-in.</li>
+					<li><span class="fa-li"><i class="fas fa-check"></i></span>Focus on straightforward developer
+						experience, supporting common reusable patterns.</li>
+				</ul>
+				<div>&nbsp;</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="row td-box td-box--1">
+	<div class="col">
+		<div class="row">
+			<div class="col-12 ">
+				<h3 class="d-flex justify-content-center">Components</h3>
+				<br>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				<div class="d-flex justify-content-center">
+					<h4>Kubernetes Service</h4>
+				</div>
+				<p>Provide Terraform templates as infrastructure as code to deploy a managed Kubernetes Service and its
+					dependent resources across cloud providers.</p>
+				<ul>
+					<li><a href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-aks">Azure
+							Kubernetes service (AKS)</a></li>
+					<li><a href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-iks">IBM Kubernetes
+							service (IKS)</a></li>
+				</ul>
+				<p>The dependent resources often include many of the following:</p>
+				<div class="row col-sm-12">
+					<ul class="dcol-md-4">
+						<li>Kubernetes service</li>
+						<li>Resource groups</li>
+						<li>Storage accounts</li>
+						<li>Container registry</li>
+						<li>Private Endpoint</li>
+					</ul>
+					<ul class="dcol-md-4">
+						<li>Log Analytics</li>
+						<li>Service principals</li>
+						<li>Secret storage</li>
+						<li>Networking</li>
+						<li>Policies</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				<div class="d-flex justify-content-center">
+					<h4>Kubernetes Platform</h4>
+				</div>
+				<p>Provide Terraform templates as infrastructure as code to deploy platform tooling on top of a
+					Kubernetes cluster to improve developer efficiency.</p>
+				<ul>
+					<li>Consistent and customizable onboarding of teams</li>
+					<li>Role-Based Access Control (global/namespace)</li>
+				</ul>
+				<p>Platform tooling includes the following (optional) integrations:</p>
+				<div class="row col-sm-12">
+					<ul class="dcol-md-4">
+						<li><a
+								href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-istio">Istio</a>
+						</li>
+						<li><a
+								href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-vault">Vault</a>
+						</li>
+						<li><a
+								href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-velero">Velero</a>
+						</li>
+						<li><a
+								href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-prometheus">Prometheus</a>
+						</li>
+						<li><a
+								href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-grafana">Grafana</a>
+						</li>
+					</ul>
+					<ul class="dcol-md-4">
+						<li><a href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-cert-manager">Cert
+								Manager</li>
+						<li><a
+								href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-open-policy-agent">Open
+								Policy Agent</a></li>
+						<li><a
+								href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-fluent">Fluentd</a>
+						</li>
+						<li><a
+								href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-sidecar-terminator">Sidecar
+								Terminator</a></li>
+						<li><a href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-elastic-cloud">Elastic
+								Cloud</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="row td-box td-box--2">
+	<div class="col">
+		<div class="row justify-content-center">
+			<div class="col-sm-12 col-md-4 col-lg-3 text-center">
+				<div class="mb-4 h1 text-white">
+					<i class="fab fa-slack"></i>
+				</div>
+				<h4>Chat with us on Slack</h4>
+				<p>
+					<a class="text-white" href="https://stats-cloud.slack.com/">
+						<button type="button" class="btn btn-secondary"
+							style="width:150px; margin-top: 12px;">Chat</button>
+					</a>
+				</p>
+				<p>Interested in learning more, or solving a particular problem?</p>
+			</div>
+			<div class="col-sm-12 col-md-4 col-lg-3 text-center">
+				<div class="mb-4 h1">
+					<i class="fab fa-github"></i>
+				</div>
+				<h4>Contributions wanted</h4>
+				<p><a href="./contributing/">
+						<button type="button" class="btn btn-secondary"
+							style="width:150px; margin-top: 12px;">Contribute</button>
+					</a>
+				</p>
+				<p>Want to collaborate with us? New users are always welcomed!</p>
+			</div>
+			<div class="col-sm-12 col-md-4 col-lg-3 text-center">
+				<div class="mb-4 h1">
+					<i class="fab fa-youtube"></i>
+				</div>
+				<h4>Watch us on YouTube</h4>
+				<p><a href="https://youtube.com/channel/UC00nN9hhb4q6IChP8yEIzGA">
+						<button type="button" class="btn btn-secondary"
+							style="width:150px; margin-top: 12px;">Watch</button>
+					</a>
+				</p>
+				<p>Screencasts related to specific platform features and general topics.</p>
+			</div>
+		</div>
+	</div>
+</section>

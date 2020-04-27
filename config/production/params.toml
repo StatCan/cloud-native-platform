@@ -1,0 +1,45 @@
+# Cloud Native Platform for Government PRODUCTION Site Params
+# Default site parameters, see "config/production" "config/staging" and "config/local" for environment specific overrides
+
+# Only add Google Custom Search and Feedback links to "production"
+
+# Create ID at https://cse.google.com/cse/
+# Google Custom Search Engine ID. Remove or comment out to disable search.
+# gcs_engine_id = ""
+
+# Adds a H2 section titled "Feedback" to the bottom of each doc. The responses are sent to Google Analytics as events.
+# This feature depends on [services.googleAnalytics] and will be disabled if "services.googleAnalytics.id" is not set.
+# If you want this feature, but occasionally need to remove the "Feedback" section from a single page,
+# add "hide_feedback: true" to the page's front matter.
+[ui.feedback]
+enable = true
+# The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
+yes = 'Glad to hear it! Please <a href="https://github.com/statcan/cloud-native-platform/issues/new/?title=Page%20is%20helpful&labels=kind%2Fmeta">tell us how we can improve</a>.'
+no = 'Sorry to hear that. Please <a href="https://github.com/statcan/cloud-native-platform/issues/new/?title=Page%20needs%20improvement&labels=kind%2Fmeta">tell us how we can improve</a>.'
+
+# Doc versions params
+# Create a separate [[versions]] set for every version / doc set branch
+# Use the ghbranchname param for specifying the GitHub branchname ->
+# Example:
+#   [thisisalink](https://github.com/.../tree/{{< params "ghbranchname" >}}/...)
+#
+# [[versions]] - Defines a single "version" of the GovCloud docs
+#   version - Intuitive version label (ie. visible in menus)
+#   ghbranchname - Name of branch of the doc version in GitHub
+#                  (https://github.com/statcan/cloud-native-platform/branches)
+#   url - Fully qualified website URL to the doc version
+#         (ie. https://www.govcloud.ca/[dirpath])
+#   dirpath - The content folder name of the doc version
+#           - Latest release is always set to "docs"
+#           - Past/archived releases change to "v#.#-docs",
+#             where # is the MAJOR and MINOR semantic version values
+
+# Latest version
+################
+# Set to "docs" path
+
+[[versions]]
+  version = "v0.1"
+  ghbranchname = "master"
+  url = "/docs/"
+  dirpath = "docs"

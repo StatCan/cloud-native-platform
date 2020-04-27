@@ -1,0 +1,23 @@
+# Cloud Native Platform  LOCAL Site Params
+# Default site parameters, see "config/production" "config/staging" and "config/local" for environment specific overrides
+
+# Usage notes:
+# To build with these settings, you use the "scripts/localbuild.sh" build script.
+# The build uses every setting defined in "config/_default" and then merges or
+# overrides all the settings defined here.
+
+# Default docs params for "local" environment
+
+# Section labels for versions
+doclabel = "Local Preview Build: "
+releaselabel = "Local Preview Build: "
+
+# Local build version
+################
+# Set to "docs" path
+
+[[versions]]
+  version = "v0.1"
+  ghbranchname = "master"
+  url = "/docs/"
+  dirpath = "docs"
