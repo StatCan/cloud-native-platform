@@ -1,0 +1,57 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloud Native Platform – Articles</title><link>https://govcloud.ca/blog/articles/</link><description>Recent Hugo news from gohugo.io</description><generator>Hugo -- gohugo.io</generator><image><url>https://govcloud.ca/img/hugo.png</url><title>GoHugo.io</title><link>https://govcloud.ca/blog/articles/</link></image><atom:link href="https://govcloud.ca/blog/articles/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Cloud Native Architecture</title><link>https://govcloud.ca/blog/2018/12/18/cloud-native-architecture/</link><pubDate>Tue, 18 Dec 2018 00:00:00 +0000</pubDate><guid>https://govcloud.ca/blog/2018/12/18/cloud-native-architecture/</guid><description>
+&lt;h2 id="cloud-native">Cloud Native&lt;/h2>
+&lt;p>A cloud native application is a distributed, elastic and horizontal scalable system composed of (micro)services which
+isolates state in a minimum of stateful components. The application and each self contained deployment unit of that
+application is designed according to cloud-focused design patterns and operated on a self service elastic platform.&lt;/p>
+&lt;blockquote>
+&lt;p>Note: Even though the specific tools and patterns may differ, cloud-native organizations and applications follow a
+fairly consistent pattern.&lt;/p>
+&lt;/blockquote>
+&lt;p>At its most fundamental level a cloud native application is engineered to run on a cloud platform and is designed for:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Resiliency&lt;/strong>: Embraces failures instead of trying to prevent them; it takes advantage of the dynamic nature of
+running on a cloud platform&lt;/li>
+&lt;li>&lt;strong>Agility&lt;/strong>: Allows for fast deployments and quick iterations&lt;/li>
+&lt;li>&lt;strong>Operability&lt;/strong>: Adds control of application life cycles from inside the application instead of relying on external
+processes and monitors&lt;/li>
+&lt;li>&lt;strong>Observability&lt;/strong>: Provides information to answer questions about application state&lt;/li>
+&lt;/ul>
+&lt;h2 id="cloud-native-infrastructure">Cloud Native Infrastructure&lt;/h2>
+&lt;p>Cloud native infrastructure is infrastructure that is hidden behind useful abstractions, controlled by APIs, managed by
+software, and has the purpose of running applications. Running infrastructure with these traits gives rise to a new
+pattern for managing that infrastructure in a scalable, efficient way.&lt;/p>
+&lt;p>Abstractions are useful when they successfully hide complexity for their consumer. They can enable more complex uses of
+the technology, but they also limit how the technology is used. They apply to low-level technology, such as how TCP
+abstracts IP, or higher levels, such as how VMs abstract physical servers. Abstractions should always allow the consumer
+to &lt;strong>“move up the stack”&lt;/strong> and not reimplement the lower layers.&lt;/p>
+&lt;p>Cloud native infrastructure needs to abstract the underlying IaaS offerings to provide its own abstractions. The new
+layer is responsible for controlling the IaaS below it as well as exposing its own APIs to be controlled by a consumer.&lt;/p>
+&lt;p>Infrastructure that is managed by software is a key differentiator in the cloud. Software-controlled infrastructure
+enables infrastructure to scale, and it also plays a role in resiliency, provisioning, and maintainability. The software
+needs to be aware of the infrastructure’s abstractions and know how to take an abstract resource and implement it in
+consumable IaaS components accordingly.&lt;/p>
+&lt;h2 id="open-source-and-government">Open Source and Government&lt;/h2>
+&lt;p>Government should build technology that uses open standards to ensure your system works and communicates with other
+products or systems, and can easily be upgraded and expanded.&lt;/p>
+&lt;p>Adopting and using &lt;strong>open standards&lt;/strong> means you can:&lt;/p>
+&lt;ul>
+&lt;li>Move between different technologies when you need to, avoiding vendor lock-in&lt;/li>
+&lt;li>Quickly and easily change your service when you need to&lt;/li>
+&lt;li>Increase compatibility with all stakeholders&lt;/li>
+&lt;li>Open up the range of companies you can purchase from as more of them are likely to use the same standard as you&lt;/li>
+&lt;li>Access a wider range of both open source and proprietary software vendors&lt;/li>
+&lt;/ul>
+&lt;p>Our choices for hosting infrastructure, databases, software frameworks, programming languages and the rest of the
+technology stack should seek to avoid vendor lock-in and match what successful modern consumer and enterprise software
+companies would choose today. In particular, digital services teams should consider using open source software,
+cloud-based, and commodity solutions across the technology stack, because of their widespread adoption and support by
+successful consumer and enterprise technology companies in the private sector.&lt;/p>
+&lt;p>Open source software (OSS) tends to use and help define open standards and publicly available specifications. OSS
+products are, by their nature, publicly available specifications, and the availability of their source code promotes
+open, democratic debate around their specifications, making them both more robust and interoperable.&lt;/p>
+&lt;p>Using open source software means you can benefit from:&lt;/p>
+&lt;ul>
+&lt;li>Solving common problems with readily available open source technology&lt;/li>
+&lt;li>More time and resource for customized solutions to solve the rare or unique problems&lt;/li>
+&lt;li>Lower implementation and operational running costs&lt;/li>
+&lt;/ul></description></item></channel></rss>

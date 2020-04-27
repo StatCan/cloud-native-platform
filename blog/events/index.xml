@@ -1,0 +1,50 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloud Native Platform – Social events</title><link>https://govcloud.ca/blog/events/</link><description>Recent Hugo news from gohugo.io</description><generator>Hugo -- gohugo.io</generator><image><url>https://govcloud.ca/img/hugo.png</url><title>GoHugo.io</title><link>https://govcloud.ca/blog/events/</link></image><atom:link href="https://govcloud.ca/blog/events/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Government of Canada Enterprise Architecture Review Board</title><link>https://govcloud.ca/blog/2020/01/17/government-of-canada-enterprise-architecture-review-board/</link><pubDate>Fri, 17 Jan 2020 00:00:00 +0000</pubDate><guid>https://govcloud.ca/blog/2020/01/17/government-of-canada-enterprise-architecture-review-board/</guid><description>
+&lt;p>The cloud native team presented to the Government of Canada Enterprise Architecture Review Board. The presentation was well recieved with quite a few statements being really supportive of the architecture and even making reference that this is exactly what would be done in the private space.&lt;/p>
+&lt;p>In addition, some of the members who were working on the Amazon cloud service provider were keen to provide help and will be making a pull request so it can be supported as well. The meeting ended with GC EARB endorsing the architecture and asking us to present at an upcoming meeting of OneGC where a more technical deep dive can occur.&lt;/p>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">The Enterprise Architecture Review Board just endorsed an open-source architecture that allows more flexibility in creating, publishing and managing web content. Novel ideas lead to big results under &lt;a href="https://twitter.com/hashtag/OneGC?src=hash&amp;amp;ref_src=twsrc%5Etfw">#OneGC&lt;/a>! &lt;a href="https://twitter.com/hashtag/GCDigital?src=hash&amp;amp;ref_src=twsrc%5Etfw">#GCDigital&lt;/a> &lt;a href="https://twitter.com/hashtag/WCMS?src=hash&amp;amp;ref_src=twsrc%5Etfw">#WCMS&lt;/a>&lt;/p>&amp;mdash; Digital Enablement (@DigiEnablement) &lt;a href="https://twitter.com/DigiEnablement/status/1218334608116285440?ref_src=twsrc%5Etfw">January 18, 2020&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;h2 id="main-presentation">Main Presentation&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://govcloud.blob.core.windows.net/docs/azure-aks-infra.pdf">Azure Reference Architecture&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://govcloud.blob.core.windows.net/docs/azure-aks-platform.pdf">Azure Kubernetes Service Platform&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://govcloud.blob.core.windows.net/docs/architecture.pdf">Drupal Architecture&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://govcloud.blob.core.windows.net/docs/architecture-links.txt">Drupal Architecture Links&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="other-links">Other Links&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-aks">Terraform for AKS&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-aks-platform">Terraform for AKS Platform&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/drupalwxt/helm-drupal">Helm chart for Drupal WxT&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/drupalwxt/terraform-containers-webapp-azure">Terraform for Azure Web Apps Containers&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://software.af.mil/dsop/documents/">US Department of Defense DevSecOps&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Blog: Digital Academy course on Cloud Native</title><link>https://govcloud.ca/blog/2019/12/17/digital-academy-course-on-cloud-native/</link><pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate><guid>https://govcloud.ca/blog/2019/12/17/digital-academy-course-on-cloud-native/</guid><description>
+&lt;p>The team presented a two-day course at the School of Public Service’s Digital Academy on Docker Containers, Kubernetes
+and Cloud Native technologies.&lt;/p>
+&lt;p>The course was attended by employees of various Government of Canada departments. The course included course material
+and interactive labs, which reinforced the content that was presented.&lt;/p></description></item><item><title>Blog: KubeCon 2019 in San Diego</title><link>https://govcloud.ca/blog/2019/11/19/kubecon-2019-in-san-diego/</link><pubDate>Tue, 19 Nov 2019 00:00:00 +0000</pubDate><guid>https://govcloud.ca/blog/2019/11/19/kubecon-2019-in-san-diego/</guid><description>
+&lt;p>The team have all returned home after another great KubeCon NA, and we thoroughly enjoyed our time in sunny San Diego.
+We got to attend lots of amazing sessions, held many insightful conversations at the various booths, and learned quite a
+bit from the phenomenal community. We tried where possible to share some of our reflections and insights learned each
+day which has been refined into a list of key takeaways.&lt;/p>
+&lt;ol>
+&lt;li>Kubernetes needs a Ruby on Rails moment&lt;/li>
+&lt;li>Vendors are moving up the stack&lt;/li>
+&lt;li>CNCF community is amazing, but the tech can be challenging&lt;/li>
+&lt;li>Multi-cloud is big business&lt;/li>
+&lt;li>Diverging Workflows: GitOps vs UI-driven&lt;/li>
+&lt;/ol></description></item><item><title>Blog: Stratosphere 2019 in Ottawa</title><link>https://govcloud.ca/blog/2019/06/20/stratosphere-2019-in-ottawa/</link><pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate><guid>https://govcloud.ca/blog/2019/06/20/stratosphere-2019-in-ottawa/</guid><description>
+&lt;h2 id="background">Background&lt;/h2>
+&lt;p>The Government of Canada (GC), in partnership with Association of Public Sector Information Professionals (DPI), is hosting Stratosphere, a conference focused on Cloud and DevOps.&lt;/p>
+&lt;p>The adoption of Cloud, and more recently, DevOps, have become growing themes amongst GC IT professionals. This conference is an opportunity for participants to share their experiences and lessons learned with their peers, and for the GC IT community to learn about possible partnerships with industry.&lt;/p>
+&lt;ul>
+&lt;li>Where: The Shaw Centre, Downtown Ottawa&lt;/li>
+&lt;li>When: June 20th, 2019&lt;/li>
+&lt;li>Who: Employees of the Government of Canada&lt;/li>
+&lt;li>Fees: None, free for all GC employees&lt;/li>
+&lt;/ul>
+&lt;h2 id="presentation">Presentation&lt;/h2>
+&lt;ul>
+&lt;li>Title: Kubernetes + containers ecosystem, CNCF, Security with Istio Service Mesh, KNative and Serverless, Open Policy Agent&lt;/li>
+&lt;li>Room: 209 - DevOps&lt;/li>
+&lt;li>Time: 10:00 - 10:30&lt;/li>
+&lt;/ul></description></item></channel></rss>

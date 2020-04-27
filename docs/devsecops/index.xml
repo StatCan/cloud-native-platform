@@ -1,0 +1,124 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloud Native Platform – GoC Enterprise DevSecOps Initiative</title><link>https://govcloud.ca/docs/devsecops/</link><description>Recent Hugo news from gohugo.io</description><generator>Hugo -- gohugo.io</generator><image><url>https://govcloud.ca/img/hugo.png</url><title>GoHugo.io</title><link>https://govcloud.ca/docs/devsecops/</link></image><atom:link href="https://govcloud.ca/docs/devsecops/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Hardening Containers</title><link>https://govcloud.ca/docs/devsecops/hardening-containers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://govcloud.ca/docs/devsecops/hardening-containers/</guid><description>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>Following the creation of the DevSecOps Initiative, this document was created to detail the Container Hardening Process to ensure it meets the &lt;a href="#cybersecurity-requirements">Hardened Containers Cybersecurity Requirements&lt;/a>.&lt;/p>
+&lt;p>To check our public repository, please check: &lt;strong>not yet publicly available&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: This document focuses on container security. It is understood that any application code or library must be scanned by static/dynamic code analysis tools prior to being integrated into a container and must pass those scans.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="architecture-and-definitions">Architecture and Definitions&lt;/h2>
+&lt;h3 id="hardened-containers-hc">Hardened Containers (HC)&lt;/h3>
+&lt;p>A hardened container is an Open Container Image (OCI) compliant image that is secured and made compliant with the &lt;a href="#cybersecurity-requirements">Hardened Containers Cybersecurity Requirements&lt;/a>. Container images should adhere to the OCI Image Format Specification to ensure portability whenever possible.&lt;/p>
+&lt;h3 id="hardened-container-team-hct">Hardened Container Team (HCT)&lt;/h3>
+&lt;p>The Hardened Container Team is responsible for the assessing and hardening of containers. The team is composed of DevOps Engineers and other container experts that have knowledge of the product being hardened and that understand the &lt;a href="#cybersecurity-requirements">Hardened Containers Cybersecurity Requirements&lt;/a>. A single team member is called a Hardener.&lt;/p>
+&lt;p>A Hardener will require the following:&lt;/p>
+&lt;ul>
+&lt;li>Expertise in OCI compliant container images, including writing compliant Dockerfile(s)&lt;/li>
+&lt;li>Expertise in the &lt;a href="#cybersecurity-requirements">Hardened Containers Cybersecurity Requirements&lt;/a>&lt;/li>
+&lt;li>Good understanding of &lt;a href="https://jfrog.com/artifactory">jFrog Artifactory&lt;/a> / &lt;a href="https://jfrog.com/artifactory">XRay&lt;/a> (Private) and &lt;a href="https://github.com/aquasecurity/trivy">Trivy&lt;/a> (Public)&lt;/li>
+&lt;/ul>
+&lt;h3 id="container-factory-cf">Container Factory (CF)&lt;/h3>
+&lt;p>To automate the Hardening Process, Statistics Canada has stood up a DevSecOps platform to setup the Continuous Integration/Continuous Delivery (CI/CD) pipeline leveraged to automate the container hardening process. An open source implementation of this platform is in the work using GitHub Actions and open source tooling such as &lt;a href="https://github.com/aquasecurity/trivy">Trivy&lt;/a>.&lt;/p>
+&lt;h3 id="centralized-container-source-code-repository-ccscr">Centralized Container Source Code Repository (CCSCR)&lt;/h3>
+&lt;p>To store the Hardened Containers and any additional relevant documentation a source code repository has been centrally hosted so Hardeners can store their code and leverage an automated CI/CD pipeline. To see how to on-board your containers into CCSCR, please consult our documentation.&lt;/p>
+&lt;p>&lt;a href="https://gitlab.example.ca/cloudnative/contributor-onboarding">https://gitlab.example.ca/cloudnative/contributor-onboarding&lt;/a>&lt;/p>
+&lt;h3 id="centralized-artifacts-repository-car">Centralized Artifacts Repository (CAR)&lt;/h3>
+&lt;p>To store the Hardened Containers, a centralized artifacts repository is being leveraged on a GoC Approved Cloud certified Protected B which provides access to the Hardened Containers.&lt;/p>
+&lt;p>The artifact repository supports both files (traditional artifacts) and containers along with a container registry itself. In addition, the artifacts repository provides a secure mechanism to store, track, and sign, and distribute approved containers.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: Currently we leverage &lt;a href="https://jfrog.com/artifactory">jFrog Artifactory&lt;/a> as our approved centralized Artifacts Repository.&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="approved-cicd-orchestration-solution-accos">Approved CI/CD Orchestration Solution (ACCOS)&lt;/h3>
+&lt;p>To build a proper CI/CD pipeline, an orchestration solution is needed along with the appropriate set of guard rails built right in. Currently one of the approved solutions is comprised of tools such as Jenkins, GitLab, Artifactory / XRay and SonarQube. All of which will be containerized and offered in a hardened variant.&lt;/p>
+&lt;h3 id="base-container-image-approved-sources-bcias">Base Container Image Approved Sources (BCIAS)&lt;/h3>
+&lt;p>To ensure container base images are sourced from approved sources, a container base image must be downloaded from a Container Base Image Approved Source.&lt;/p>
+&lt;p>Please check the &lt;a href="#selecting-the-container-base-image">Selecting the container base image&lt;/a> section of this document to understand how to select your base image.&lt;/p>
+&lt;p>The following sources are currently approved and should be used in order of priority:&lt;/p>
+&lt;p>&lt;strong>Trusted&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Centralized Artifacts Repository (CAR) (trusted)&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Untrusted&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Product Vendor proprietary repository (untrusted)&lt;/li>
+&lt;li>Docker Hub (untrusted)&lt;/li>
+&lt;li>Red Hat Container Repository (untrusted)&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: A Product Vendor repository can only be used if a Memorandum of Understanding (MOU) is signed between the GoC and the vendor to ensure access to base images and their updates.&lt;/p>
+&lt;/blockquote>
+&lt;p>A trusted repository means that the containers were already hardened by the Hardening team and can be used as is.&lt;/p>
+&lt;h2 id="container-hardening-process">Container Hardening Process&lt;/h2>
+&lt;h3 id="selecting-the-container-base-image">Selecting the container base image&lt;/h3>
+&lt;p>When selecting the appropriate container base image to leverage the key recommendations provided below will be followed.&lt;/p>
+&lt;ul>
+&lt;li>Always prioritize the use of the base image from its vendor or its open source community so you can be directly coupled with their updates. If you need to enhance the file, just create a Dockerfile which uses the base image with the FROM instruction.&lt;/li>
+&lt;li>Modify, if need be, the FROM instruction so the Dockerfile uses a GoC hardened base container image whenever available. For example, if an application uses the Docker Hub JDK image, ensure the FROM instruction is replaced by the hardened JDK base image instead.&lt;/li>
+&lt;li>Use base images that reuse the &amp;ldquo;closest&amp;rdquo; hardened image available to inherit its hardening: for example, if you use a Java application, use the base image of GoC hardened JDK and not the GoC hardened OS so you inherit all the hardened code of JDK as well and don’t have to re-harden JDK.&lt;/li>
+&lt;li>If you have multiple source options/tags/variants for your base image, ensure you scan them with either jFrog XRay (private) and/or Trivy (public) to understand security risks associated with each image and select the image most closely aligned with GoC &lt;a href="#cybersecurity-requirements">Hardened Containers Cybersecurity Requirements&lt;/a>.&lt;/li>
+&lt;li>If the base image has security flaws, first try using it as a base image in your own Dockerfile and mitigating the flaw by overriding. If that is impossible, you will have to fork the base image and remove the library/issue used to pass scan results or simply accept its risk.&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;strong>Note:&lt;/strong>: It is highly recommended to have the GoC Enterprise DevSecOps team review and agree of the selection of a base image.&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="process">Process&lt;/h3>
+&lt;p>It is important to understand that containers will inherit many security controls of the underlying PaaS solution, assuming the underlying host OS has been hardened per agency specific security guidelines (see Appendix A).&lt;/p>
+&lt;p>When selecting a base image and/or hardening a container image - there are a series of best practice considerations prior to engaging the hardening pipeline (see Appendix B).&lt;/p>
+&lt;p>It is important to select the proper base images, see instructions above &lt;a href="#selecting-the-container-base-image">Selecting the container base image&lt;/a>.&lt;/p>
+&lt;h3 id="automated-hardening-of-new-releases">Automated Hardening of New Releases&lt;/h3>
+&lt;p>The hardening process will be fully automated so that when a new image is released that is detected by the CI/CD pipeline, the pipeline will download any new artifacts/binaries, Dockerfile updates, and run the steps mentioned above, triggered automatically. The pipeline will attempt to search for new base images and automatically run a new hardening pipeline and notify the team if a build fails.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Note:&lt;/strong> For vendors, we will only ever pull binaries/artifacts from you.&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="third-party-container-sharing">Third Party Container Sharing&lt;/h3>
+&lt;p>Third parties must provide complete Dockerfile and other necessary scripts or artifacts so they can be ingested into the CCSCR.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Note:&lt;/strong> Docker Binary files will not be accepted if the Dockerfile isn't provided in order for us to replicate the build. The goal is to integrate existing Dockerfile into the Hardening process and the CCSCR so the new containers can benefit from the same automation.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="hardened-containers-cybersecurity-requirements">Hardened Containers Cybersecurity Requirements&lt;/h2>
+&lt;h3 id="cybersecurity-requirements">Cybersecurity Requirements&lt;/h3>
+&lt;p>&lt;strong>Comply with initial and ongoing GoC Cybersecurity accreditation regulations / frameworks:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Please make sure that the container base OS image that you are using has been hardened&lt;/li>
+&lt;li>Risk Management Framework (RMF) process and required documentation&lt;/li>
+&lt;li>Compliant against the Center for Internet Security (CIS) Docker Benchmark&lt;/li>
+&lt;li>ITSG-33 has minimal guidance so will defer to NIST&lt;/li>
+&lt;li>Leverage both &lt;a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-190.pdf">NIST SP 800-53&lt;/a> moderate controls and &lt;a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-190.pdf">NIST 800-190&lt;/a> as guidance&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Documentation:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Generate and automate necessary documentation for Risk Management&lt;/li>
+&lt;li>RMF Controls&lt;/li>
+&lt;li>Data Flows&lt;/li>
+&lt;/ul>
+&lt;p>Enable TLS on all PaaS tools that have UI or send data. HTTP will be disabled and FIPS 140.2 used.&lt;/p>
+&lt;p>Where authentication and authorization is required, leverage GoC ADFS authentication.&lt;/p>
+&lt;p>Whenever possible, prohibit processes and containers from running as root.&lt;/p>
+&lt;h3 id="hardening-container-risk-acceptable">Hardening Container Risk Acceptable&lt;/h3>
+&lt;p>Process created to accept specific risk of a cybersecurity findings that cannot be remediated at the time. This will be evaluated on a case by case basic and handled by the platform authorization officer.&lt;/p>
+&lt;h3 id="active-directory--common-access-card-integration-requirements">Active Directory / Common Access Card Integration Requirements&lt;/h3>
+&lt;p>Active Directory Domain Services (AD DS) provides a centralized, delegated administrative model and single sign-on (SSO) capabilities to an organization. Active Directory stores information about objects on the network and makes this information available for administrators and users to find and use. Active Directory uses a structured data store as the basis for a logical, hierarchical organization of directory information.&lt;/p>
+&lt;p>It is imperative that any Protected B and above environment use MFA authentication for any UI based authentication (such as a backend or dashboard). For Non Person Entity (NPO) such as communication between services, signed certificates can be used and PKI can be leveraged.&lt;/p>
+&lt;p>The Single Sign On (SSO) should be fully integrated with the GoC ADFS that is currently being used.&lt;/p>
+&lt;h2 id="appendix-a">Appendix A&lt;/h2>
+&lt;h3 id="security-control-inheritance-paas--platform-host">Security Control Inheritance (PaaS / Platform Host)&lt;/h3>
+&lt;p>PaaS providers rely on technical concepts such as process isolation, service routing, redundancy, firewall controls, and many other security layers. In practice, these controls typically align with Government security concepts out-of-the-box. At the moment the Government of Canada has certified the following cloud providers as Protected B compliant.&lt;/p>
+&lt;ul>
+&lt;li>Amazon&lt;/li>
+&lt;li>Azure&lt;/li>
+&lt;li>Google&lt;/li>
+&lt;li>IBM&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: While a cloud provider might be protected b compliant it doesn't mean that the various types services offerred are also compliant.&lt;/p>
+&lt;/blockquote>
+&lt;p>It is important to add that additional security overlays provided by the &lt;a href="https://cyber.gc.ca/en/path-enterprise-security">Canadian Center for Cyber Security&lt;/a> and the &lt;a href="https://www.cisecurity.org/controls/">Center for Internet Security controls&lt;/a> should always be leveraged (ITSG-33, CIS, etc) and constantly reassessed on a yearly interval.&lt;/p>
+&lt;p>With a properly locked down hosting environment containers inherit most of the security controls and benefits from infrastructure to host OS level remediation requirements. The focus then shifts to container and application security requirements (i.e. static code analysis, code linting, CVE testing).&lt;/p>
+&lt;h2 id="appendix-b">Appendix B&lt;/h2>
+&lt;h3 id="container-securityremediation-considerations">Container Security/Remediation Considerations&lt;/h3>
+&lt;p>Always automate all container hardening processes leveraging CI/CD pipelines whenever possible. Manual processes should never be used in order to minimize operational concerns.&lt;/p>
+&lt;p>When not using offially supported containers from trusted vendors (jFrog, GitLab, Hashicorp) you should always select a proper base image by following the instructions under the &lt;a href="#selecting-the-container-base-image">Selecting the container base image&lt;/a> section of this document.&lt;/p>
+&lt;p>For example:&lt;/p>
+&lt;ul>
+&lt;li>If a container requires a base OS (such as alpine), the hardened base image of this OS must be used&lt;/li>
+&lt;li>If a container needs a JDK such a for a Java application you should consider using a Distroless image&lt;/li>
+&lt;/ul></description></item></channel></rss>
