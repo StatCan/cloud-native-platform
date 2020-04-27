@@ -92,9 +92,75 @@ When selecting the appropriate container base image to leverage the key recommen
 
 It is important to understand that containers will inherit many security controls of the underlying PaaS solution, assuming the underlying host OS has been hardened per agency specific security guidelines (see Appendix A).
 
-When selecting a base image and/or hardening a container image - there are a series of best practice considerations prior to engaging the hardening pipeline (see Appendix B).
+When selecting a base image and/or hardening a container image there are a few best practice guidelines prior to leveraging the [Hardening Pipeline](#appendix-b).
 
 It is important to select the proper base images, see instructions above [Selecting the container base image](#selecting-the-container-base-image).
+
+Using the [Container Factory](#container-factory) he Hardener will start the hardening process ([Hardening Pipeline](#appendix-b)) utilizing the following steps:
+
+* Create a new folder in the CCSCR with the vendor name (hashicorp)
+* Under the vendor create a new folder in the CCSCR with the product name (vault)
+* If a product has multiple variants (cli, daemon, x86, x64) various sub folders are created for each variant
+* Define and list which version of the product, the hardened containers will cover
+* Select a GoC base container image approved source to download the base image from, for each version
+* Each hardened container must also have a README.md, LICENSE.md and CHANGELOG.md file
+* Script to assist the CI/CD process can be provided and will be stored into a sub folder called scripts
+* Documentation can be provided and will be stored into a sub folder called documentation
+* All scanning results from the CI/CD process are to be copied into a sub folder compliance
+* Examples can be added to help with the adoption of the containers by creating an sub folder called examples
+* Any changes in the CCSCR folder always result in files being copied into CAR through the build and scan process folowing the steps above
+
+> **Note:** Since vendors will not get access to CCSCR, they will have to provide acess to continuously updated files which include binaries, the Dockerfile, and various other artifacts such as the README and License file.
+
+### Example of a Hardened Container Folder Structure
+
+##### Centralized Container Source Code Repository (CCSCR):
+
+```yml
+hashicorp (vendor)
+│   README.md
+│───vault (application)
+│   │   README.md
+│   │
+│   │───v.8.0 (application version)
+│   │   │   README.md
+│   │   │   LICENSE.md
+│   │   │   CHANGELOG.md
+│   │   │   Dockerfile (base approved image)
+│   │   │───scripts/
+│   │   │───docs/
+│   │   │───compliance/
+│   │   └───examples/
+│   │
+│   │───v.7.9
+│   └───v.7.8
+```
+
+##### Centralized Artifacts Repository (CAR):
+
+```yml
+hashicorp (vendor)
+│   README.md
+│───vault (application)
+│   │   README.md
+│   │
+│   │───v.1.4.0 (application version)
+│   │   │   **vault-v.8.0-hardened-container.tgz**
+│   │   │   **vault-v.8.0-checksum**
+│   │   │   README.md
+│   │   │   LICENSE.md
+│   │   │   CHANGELOG.md
+│   │   │   Dockerfile (base approved image)
+│   │   │
+│   │   │───scripts/
+│   │   │───docs/
+│   │   │───compliance/
+│   │   │   │   **CI/CD**
+│   │   └───examples/
+│   │
+│   │───v.1.3.9
+│   └───v.1.3.8
+```
 
 ### Automated Hardening of New Releases
 

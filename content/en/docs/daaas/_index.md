@@ -11,11 +11,11 @@ In order to help guide the general direction of DAaaS and what we think can help
 
 Firstly, we're interested in leveraging the tools and experience that we have already obtained at Statistics Canada. This would mean utilizing Kubernetes (via Azure Kubernetes Service) to orchestrate all of the data science workloads. The Terraform configuration (Infrastructure as Code) already exists and we have launched a cluster within a day with all of our common platform tools and the various data analytics tools; KubeFlow, Jupyterhub, and the Databricks operator to name a few, as well as access to CPU and GPU machines that can autoscale on demand. The Databricks operator allows us to manage Databricks from a unified control plane, utilizing Desired State Configuration and showcases an example of how Kubernetes can control PAAS services. All these tools align with industry standards for data analytics.
 
-> Note: To learn more about why Kubernetes is a good fit to manage Azure Databricks, we recommend quickly reading over the first half of the [Azure Data Bricks Operator](https://blog.openshift.com/wp-content/uploads/OpenShift-Commons-MSFT-Azure-Databricks-Operator.pdf) presentation by Microsoft which essentially describes vision. Then to see how Kubeflow can launch complex databricks operations as a pipeline which can be one of many potential outcomes; please see these [examples](https://github.com/kubeflow/pipelines/tree/0708cd723e088696ee86d523576c2daf08b5aa01/samples/contrib/azure-samples/kfp-azure-databricks). Additionally, in the links below we highlighted some reference architectures.
+> **Note**: To learn more about why Kubernetes is a good fit to manage Azure Databricks, we recommend quickly reading over the first half of the [Azure Data Bricks Operator](https://blog.openshift.com/wp-content/uploads/OpenShift-Commons-MSFT-Azure-Databricks-Operator.pdf) presentation by Microsoft which essentially describes vision. Then to see how Kubeflow can launch complex databricks operations as a pipeline which can be one of many potential outcomes; please see these [examples](https://github.com/kubeflow/pipelines/tree/0708cd723e088696ee86d523576c2daf08b5aa01/samples/contrib/azure-samples/kfp-azure-databricks). Additionally, in the links below we highlighted some reference architectures.
 
 Statistics Canada has experience operating Kubernetes and data analytics/science pipelines on top of it. Since Kubernetes is a general computation orchestrator, we can run supporting services, applications, and more following a common deployment and management methodology. Additionally with the integration with Kubernetes Role-Based Access Control (RBAC) and the Open Policy Agent, we can have fine-grained control over the configuration of data analytics pipelines.
 
-> Note: We had to remove all references to the hostname at the moment but hope in the future can make available.
+> **Note**: We had to remove all references to the hostname at the moment but hope in the future can make available.
 
 ## Key Highlights
 
@@ -283,7 +283,7 @@ The above picture demonstrates the action which builds and deploys the Portal we
 
 Launched MLflow alongside with its web ui in a highly available fashion on top of Kubernetes. MLflow was configured to use an Azure storage account for the backend artifact store.
 
-> Note: With MLflow 1.1, you can now run MLflow Projects on Kubernetes clusters. Any MLflow Project with a Docker Environment is supported. MLflow executes your Project code as a Kubernetes Job and periodically monitors its status until completion.
+> **Note**: With MLflow 1.1, you can now run MLflow Projects on Kubernetes clusters. Any MLflow Project with a Docker Environment is supported. MLflow executes your Project code as a Kubernetes Job and periodically monitors its status until completion.
 
 What can you do it with / what have we done with it?
 
