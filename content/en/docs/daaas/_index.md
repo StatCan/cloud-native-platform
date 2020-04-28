@@ -399,6 +399,7 @@ What can you do it with / what have we done with it?
 * https://github.com/StatCan/shiny
 * https://github.com/StatCan/statcan.orchardcore
 * https://github.com/StatCan/terraform-vault (private)
+* https://github.com/StatCan/vault-plugin-secrets-minio
 
 #### GitHub Actions
 
@@ -415,7 +416,6 @@ What can you do it with / what have we done with it?
 * https://github.com/StatCan/StatCan.OrchardCore/actions
 * https://github.com/StatCan/terraform-kubernetes-aks-daaas-private/actions (private)
 * https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas-private/actions (private)
-* https://github.com/StatCan/vault-plugin-secrets-minio
 
 #### Public
 
