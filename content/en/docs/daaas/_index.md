@@ -362,6 +362,7 @@ What can you do it with / what have we done with it?
 ### Source Code
 
 * https://github.com/StatCan/terraform-vault (private)
+* https://github.com/StatCan/vault-plugin-secrets-minio
 
 ## Important Links
 
@@ -414,6 +415,7 @@ What can you do it with / what have we done with it?
 * https://github.com/StatCan/StatCan.OrchardCore/actions
 * https://github.com/StatCan/terraform-kubernetes-aks-daaas-private/actions (private)
 * https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas-private/actions (private)
+* https://github.com/StatCan/vault-plugin-secrets-minio
 
 #### Public
 
