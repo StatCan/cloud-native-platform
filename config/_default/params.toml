@@ -26,7 +26,7 @@ commons_license = "https://creativecommons.org/licenses/by/4.0/"
 apacheLicense = "Apache 2.0"
 apache_license = "https://www.apache.org/licenses/LICENSE-2.0"
 govcloudLicense = "Licensing"
-govcloud_license = "https://github.com/statcan/cloud-native-platform/blob/master/LICENSE"
+govcloud_license = "https://github.com/statcan/cloud-native-platform/blob/master/LICENSE.md"
 privacyPolicy = "Privacy Policy"
 privacy_policy = "https://statcan.gc.ca/eng/reference/privacy"
 

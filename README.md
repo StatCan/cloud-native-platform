@@ -3,7 +3,7 @@
 [Docsy](https://github.com/google/docsy) is a Hugo theme for technical documentation sites, providing easy site
 navigation, structure, and more.
 
-> This Docsy dervied project is hosted at [https://govcloud.ca/](https://govcloud.ca/). You can find detailed theme instructions in the Docsy user guide: https://docsy.dev/docs/
+> This Docsy derived project is hosted at [https://govcloud.ca/](https://govcloud.ca/). You can find detailed theme instructions in the Docsy user guide: https://docsy.dev/docs/
 
 ## Cloning
 
@@ -13,7 +13,6 @@ site. If you just want to build the site, run `hugo` instead.
 
 ```sh
 git clone --recurse-submodules --depth 1 https://github.com/statcan/cloud-native-platform.git
-cd website
 hugo server --environment local
 ```
 

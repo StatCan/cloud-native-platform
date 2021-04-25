@@ -1,7 +1,7 @@
 {{/* In page TOC for landing pages (_index.md/.html) that exclude "readfile". */}}
-{{ if or (not (.HasShortcode "readfile")) ($.Page.Params.showlandingtoc) }}
+{{ if and (not (.HasShortcode "readfile")) ($.Page.Params.showlandingtoc) }}
 <div>
-  <b>Table of contents</b>
+  <b class="h5">Table of contents</b>
   <div>
     <ul class="td-sidebar-nav" style="margin-bottom: 0;">
     {{ template "inpage-toc" (dict "page" . "section" .CurrentSection) }}

@@ -1,0 +1,28 @@
+{{ if (in .Dir "releases") }}
+{{ $.Scratch.Set "releasessection" "Releases"}}
+{{ else if (in .Dir "horizontal") }}
+{{ $.Scratch.Set "releasessection" "Horizontal"}}
+{{ else if (in .Dir "platform") }}
+{{ $.Scratch.Set "" "Platform"}}
+{{ else }}
+{{ $.Scratch.Set "releasessection" "Infrastructure"}}
+{{ end }}
+
+<h1>{{ $.Scratch.Get "releasessection" }}</h1>
+{{ if eq .Dir "releases/" }}
+<p>Consult this page to keep up-to-date with the Cloud Native Platform for Government.</p>
+<ul>
+<li><a href="./horizontal"><b>Horizontal Services</b></a>: <br>{{ end }}
+{{ if or (in .Dir "horizontal") (eq .Dir "releases/") }}See the latest updates performed against the Horizontal Services.{{ end }}
+
+{{ if eq .Dir "releases/" }}</li>
+<li><a href="./platform"><b>Platform Services</b></a>: <br>{{ end }}
+{{ if or (in .Dir "platform") (eq .Dir "releases/") }}See the latest updates performed against the Platform.{{ end }}
+
+{{ if eq .Dir "releases/" }}</li>
+</ul>
+<hr>
+<p><b>Browse all releases by date:</b></p>
+{{ else }}
+<hr>
+{{ end }}

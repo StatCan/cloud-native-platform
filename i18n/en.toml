@@ -62,3 +62,19 @@ other = "Create documentation issue"
 other = "Create project issue"
 [post_posts_in]
 other = "Posts in"
+
+# Releases
+[release_byline_by]
+other = "By"
+[release_created]
+other = "Created"
+[release_last_mod]
+other = "Last modified"
+[release_edit_this]
+other = "View/Edit this page"
+[release_create_issue]
+other = "Create documentation issue"
+[release_create_project_issue]
+other = "Create project issue"
+[release_releases_in]
+other = "Releases in"
