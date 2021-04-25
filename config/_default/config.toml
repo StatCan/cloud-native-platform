@@ -4,7 +4,7 @@
 # To build with these settings, see "scripts/build.sh" or "scripts/localbuild.sh"
 # Also see environment specific settings in "config/production" or "config/staging".
 
-title = "Cloud Native Platform"
+title = "Cloud Native Platform Portal"
 configDir = "config"
 canonifyURLs = "true"
 relativeURLs = "true"
@@ -38,6 +38,7 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 # Configure how URLs look like per section.
 [permalinks]
 blog = "/:section/:year/:month/:day/:slug/"
+releases = "/:section/:year/:month/:day/:slug/"
 
 # Image processing configuration.
 [imaging]
@@ -58,9 +59,14 @@ anchor = "smart"
     weight = 30
 
   [[menu.main]]
+    name = "Releases"
+    url = "/releases/"
+    weight = 40
+
+  [[menu.main]]
     name = "Community"
     url = "/community/"
-    weight = 40
+    weight = 50
 
   [[menu.main]]
     name = "Contributing"

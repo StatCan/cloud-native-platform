@@ -10,8 +10,6 @@ The cloud native team presented to the Government of Canada Enterprise Architect
 
 In addition, some of the members who were working on the Amazon cloud service provider were keen to provide help and will be making a pull request so it can be supported as well. The meeting ended with GC EARB endorsing the architecture and asking us to present at an upcoming meeting of OneGC where a more technical deep dive can occur.
 
-{{< tweet 1218334608116285440 >}}
-
 ## Main Presentation
 
 * [Azure Reference Architecture](https://govcloud.blob.core.windows.net/docs/azure-aks-infra.pdf)

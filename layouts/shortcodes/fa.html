@@ -1,0 +1,10 @@
+<!-- use default fontawesome class 'fas' or use a specified one like 'fab' for brands -->
+{{ $faStylePrefix := (.Get "style") }}
+{{ $faLink := (.Get "link") }}
+{{ if in (slice "fas" "far" "fal" "fad" "fab") (.Get "class") }}
+  {{ $faStylePrefix = (.Get "class") }}
+{{ end }}
+
+<a href="{{ $faLink }} " class="icon-block">
+  <i class="{{ $faStylePrefix }}{{ $iconName := .Params.class }} fa-{{ $iconName }}"></i>
+</a>

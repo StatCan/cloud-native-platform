@@ -1,6 +1,4 @@
-{{ if (in .Dir "releases") }}
-{{ $.Scratch.Set "blogsection" "Releases"}}
-{{ else if (in .Dir "articles") }}
+{{ if (in .Dir "articles") }}
 {{ $.Scratch.Set "blogsection" "Articles"}}
 {{ else if (in .Dir "events") }}
 {{ $.Scratch.Set "blogsection" "Social events"}}
@@ -12,8 +10,7 @@
 {{ if eq .Dir "blog/" }}
 <p>Follow this blog to keep up-to-date with the Cloud Native Platform for Government.</p>
 <ul>
-<li><a href="./releases"><b>Release and feature announcements</b></a>: <br>{{ end }}
-{{ if or (in .Dir "releases") (eq .Dir "blog/") }}Learn about each release, what is new and changed, and how to get started.{{ end }}
+{{ end }}
 
 {{ if eq .Dir "blog/" }}</li>
 <li><a href="./articles"><b>Articles</b></a>: <br>{{ end }}
