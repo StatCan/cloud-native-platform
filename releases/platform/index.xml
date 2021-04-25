@@ -1,0 +1,21 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloud Native Platform – Platform Services</title><link>https://govcloud.ca/releases/platform/</link><description>Recent Hugo news from gohugo.io</description><generator>Hugo -- gohugo.io</generator><image><url>https://govcloud.ca/img/hugo.png</url><title>GoHugo.io</title><link>https://govcloud.ca/releases/platform/</link></image><atom:link href="https://govcloud.ca/releases/platform/index.xml" rel="self" type="application/rss+xml"/><item><title>Releases: Cloud Native Platform 2021.01</title><link>https://govcloud.ca/releases/2021/01/01/cloud-native-platform-2021.01/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>https://govcloud.ca/releases/2021/01/01/cloud-native-platform-2021.01/</guid><description>
+&lt;p>JIRA: &lt;a href="https://jirab.example.ca/browse/XXX-XXXX">https://jirab.example.ca/browse/XXX-XXXX&lt;/a>&lt;/p>
+&lt;p>Please be advised that there will be two upcoming maintenance windows for the clusters in the Enterprise Cloud (Azure).&lt;/p>
+&lt;p>The maintenance activities are scheduled for the following times (Eastern Standard Time):&lt;/p>
+&lt;ol>
+&lt;li>Development and Test:&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>Tuesday, December 8, 2020 from 7 pm -&amp;gt; 11:59 pm&lt;/li>
+&lt;li>Kubernetes will be updated to v1.17.13&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>Management and Production:&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>Thursday, December 10, 2020 from 7 pm -&amp;gt; 11:59 pm&lt;/li>
+&lt;li>Kubernetes will be updated to v1.17.13&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>Downtime of the cluster is expected throughout the maintenance period. Applications running in the clusters will be restarted. Downtime for Management and Production will be minimal.&lt;/p>
+&lt;/blockquote></description></item></channel></rss>

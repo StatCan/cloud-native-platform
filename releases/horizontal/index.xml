@@ -1,0 +1,13 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloud Native Platform – Horizontal Services</title><link>https://govcloud.ca/releases/horizontal/</link><description>Recent Hugo news from gohugo.io</description><generator>Hugo -- gohugo.io</generator><image><url>https://govcloud.ca/img/hugo.png</url><title>GoHugo.io</title><link>https://govcloud.ca/releases/horizontal/</link></image><atom:link href="https://govcloud.ca/releases/horizontal/index.xml" rel="self" type="application/rss+xml"/><item><title>Releases: Horizontal Services 2021.01</title><link>https://govcloud.ca/releases/2021/01/01/horizontal-services-2021.01/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>https://govcloud.ca/releases/2021/01/01/horizontal-services-2021.01/</guid><description>
+&lt;p>JIRA: &lt;a href="https://jirab.example.ca/browse/XXX-XXXX">https://jirab.example.ca/browse/XXX-XXXX&lt;/a>&lt;/p>
+&lt;p>The following services in the Enterprise Cloud (Azure) will be unavailable tomorrow, January, 1st from 7:00p.m -&amp;gt; 11:59p.m.&lt;/p>
+&lt;p>The following services will be affected:&lt;/p>
+&lt;ol>
+&lt;li>GitLab&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>GitLab Security Update (13.8.4)&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>There are security updates, bug fixes and features improvements across the suite of both projects.&lt;/p>
+&lt;/blockquote></description></item></channel></rss>

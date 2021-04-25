@@ -1,0 +1,10 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloud Native Platform – Handbook</title><link>https://govcloud.ca/docs/handbook/</link><description>Recent Hugo news from gohugo.io</description><generator>Hugo -- gohugo.io</generator><image><url>https://govcloud.ca/img/hugo.png</url><title>GoHugo.io</title><link>https://govcloud.ca/docs/handbook/</link></image><atom:link href="https://govcloud.ca/docs/handbook/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Administrative</title><link>https://govcloud.ca/docs/handbook/administrative/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://govcloud.ca/docs/handbook/administrative/</guid><description>
+&lt;p>This section is used for Administrative topics related to the Cloud Native Solutions team.&lt;/p></description></item><item><title>Docs: Standard Operating Procedures</title><link>https://govcloud.ca/docs/handbook/standard-operating-procedures/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://govcloud.ca/docs/handbook/standard-operating-procedures/</guid><description>
+&lt;p>This section lists all the standard operating procedures (SOP) the Cloud Native Team follows in accomplishing their work. These SOPs guide how we work and help ensure consistency to our processes.&lt;/p>
+&lt;p>Some SOPs you can expect to find include:&lt;/p>
+&lt;ul>
+&lt;li>Platform maintenance processes&lt;/li>
+&lt;li>Coding standards and best practices&lt;/li>
+&lt;li>Concept of Operations (CONOPS) documents&lt;/li>
+&lt;/ul></description></item><item><title>Docs: Technical Advisory Group</title><link>https://govcloud.ca/docs/handbook/technical-advisory-group/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://govcloud.ca/docs/handbook/technical-advisory-group/</guid><description>
+&lt;p>The Technical Advisory Group (TAG) is the governing committee of the Cloud Native Platform (CNP).&lt;/p></description></item></channel></rss>

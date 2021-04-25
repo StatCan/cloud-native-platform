@@ -1,8 +1,0 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloud Native Platform – Reference Documentation</title><link>https://govcloud.ca/docs/reference/</link><description>Recent Hugo news from gohugo.io</description><generator>Hugo -- gohugo.io</generator><image><url>https://govcloud.ca/img/hugo.png</url><title>GoHugo.io</title><link>https://govcloud.ca/docs/reference/</link></image><atom:link href="https://govcloud.ca/docs/reference/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Getting Help</title><link>https://govcloud.ca/docs/reference/getting-help/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://govcloud.ca/docs/reference/getting-help/</guid><description>
-&lt;h2 id="slack-channel">Slack Channel&lt;/h2>
-&lt;p>The quickest way to get help is to post a question in &lt;a href="https://message.gccollab.ca/">GCCollab&lt;/a> under the &lt;strong>#cloudnative&lt;/strong> channel.&lt;/p>
-&lt;h2 id="raise-a-support-ticket">Raise a support ticket&lt;/h2>
-&lt;p>You can &lt;a href="https://github.com/statcan/">raise a support ticket&lt;/a> as an issue on our GitHub repository.&lt;/p>
-&lt;h2 id="open-hours">Open Hours&lt;/h2>
-&lt;p>We run a monthly &amp;ldquo;open hour&amp;rdquo; the last Friday of every month.&lt;/p>
-&lt;p>These are sessions in which you can discuss anything relating to the cloud platform.&lt;/p></description></item></channel></rss>

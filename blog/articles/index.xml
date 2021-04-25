@@ -1,4 +1,316 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloud Native Platform – Articles</title><link>https://govcloud.ca/blog/articles/</link><description>Recent Hugo news from gohugo.io</description><generator>Hugo -- gohugo.io</generator><image><url>https://govcloud.ca/img/hugo.png</url><title>GoHugo.io</title><link>https://govcloud.ca/blog/articles/</link></image><atom:link href="https://govcloud.ca/blog/articles/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Cloud Native Architecture</title><link>https://govcloud.ca/blog/2018/12/18/cloud-native-architecture/</link><pubDate>Tue, 18 Dec 2018 00:00:00 +0000</pubDate><guid>https://govcloud.ca/blog/2018/12/18/cloud-native-architecture/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloud Native Platform – Articles</title><link>https://govcloud.ca/blog/articles/</link><description>Recent Hugo news from gohugo.io</description><generator>Hugo -- gohugo.io</generator><image><url>https://govcloud.ca/img/hugo.png</url><title>GoHugo.io</title><link>https://govcloud.ca/blog/articles/</link></image><atom:link href="https://govcloud.ca/blog/articles/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Year in Review (2020)</title><link>https://govcloud.ca/blog/2020/01/05/year-in-review-2020/</link><pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate><guid>https://govcloud.ca/blog/2020/01/05/year-in-review-2020/</guid><description>
+&lt;h2 id="cloud-native-team">Cloud Native Team&lt;/h2>
+&lt;p>The Cloud Native team is a modernization initiative part of the larger Cloud Enablement Project. We investigate, design, develop and operate modern infrastructure systems powered by cloud-first designs and open source software that enable project teams to develop, deploy, and operate applications in a secure, flexible and interoperable fashion.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Note:&lt;/strong> For the past 1.5 years until a few weeks ago, the Cloud Native Team was a team of 2 people and now we have grown to a team of 5.&lt;/p>
+&lt;/blockquote>
+&lt;p>We have three primary objectives:&lt;/p>
+&lt;ol>
+&lt;li>To design and build a cross-cloud platform for application teams.&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>The platform enables built-in security, logging, monitoring and observability of applications with little to no effort from the application teams using different technology stacks.&lt;/p>
+&lt;/blockquote>
+&lt;ol start="2">
+&lt;li>To assist application teams with modernizing their applications for a cloud native environment.&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>This includes moving applications towards a more distributed and resilient microservices architecture.&lt;/p>
+&lt;/blockquote>
+&lt;ol start="3">
+&lt;li>To deliver and develop applications more rapidly and in a secure manner.&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>This is possible due to the reduced surface area application developers need to concern themselves with while inheriting the baked in security and unified promotion of workloads from dev to production.&lt;/p>
+&lt;/blockquote>
+&lt;p>To support these and other workloads, we also provide the core foundational &lt;strong>Horizontal Services&lt;/strong> (described further below) in the cloud for all infrastructure and development teams across Statistics Canada.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Note:&lt;/strong> It is important to mention that all of these horizontal services run in our management cluster and have been maintained with 99% uptime over the past 2 years.&lt;/p>
+&lt;/blockquote>
+&lt;p>We also have developed a series of pre-defined templates for the most common technology stacks to speed the onboarding time of applications to hours. All the while providing a consistent pipeline and user experience from development to production across all of the project teams reducing the support overhead.&lt;/p>
+&lt;p>Lastly, it is important to mention we are following industry standards and, in particular, leveraging the work open sourced by the U.S. Department of Defense Chief Software Office's DevSecOps platform to modernize our workflows.&lt;/p>
+&lt;h3 id="kubernetes">Kubernetes&lt;/h3>
+&lt;p>We have multiple Kubernetes clusters for different environments:&lt;/p>
+&lt;ol>
+&lt;li>Development&lt;/li>
+&lt;li>Test&lt;/li>
+&lt;li>QA (planned if needed)&lt;/li>
+&lt;li>Production&lt;/li>
+&lt;li>Management: Used for Horizontal Services&lt;/li>
+&lt;li>Innovation: Used for the rapid prototyping (in days and not months) and evaluation of workloads&lt;/li>
+&lt;li>DAaaS: Used for data science related workloads&lt;/li>
+&lt;/ol>
+&lt;p>We have also experimented running our platform on multiple clouds, including AWS and IBM Cloud.&lt;/p>
+&lt;p>All of the clusters implement the following controls:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>Enforce RBAC&lt;/strong>: User permissions are associated to their Active Directory account / groups&lt;/li>
+&lt;li>&lt;strong>Policy Enforcement&lt;/strong>: Enforce departmental security policies based on pre-defined criteria&lt;/li>
+&lt;li>&lt;strong>Security&lt;/strong>: All data is encrypted at rest and in transit, and behind a corporate firewall&lt;/li>
+&lt;li>&lt;strong>Network Policy&lt;/strong>: By default, network traffic is denied except where explicit flows between services have been granted&lt;/li>
+&lt;li>&lt;strong>Automated CI / CD&lt;/strong>: Deployment of applications are done through a vetted DevSecOps process&lt;/li>
+&lt;li>&lt;strong>Automated Backups&lt;/strong>: Backups of applications, data and cluster state&lt;/li>
+&lt;li>&lt;strong>Hybrid Workloads&lt;/strong>: Support both Linux and Windows Workloads&lt;/li>
+&lt;li>&lt;strong>Infrastructure as Code&lt;/strong>: All of our clusters can be destroyed and recreated entirely through automation (Terraform)&lt;/li>
+&lt;/ol>
+&lt;p>We launched and maintained over the past 2 years the Platform Services that empower project teams.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Service&lt;/th>
+&lt;th>URL&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Cert Manager&lt;/td>
+&lt;td>N/A&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Elastic Stack&lt;/td>
+&lt;td>N/A&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Fluentd&lt;/td>
+&lt;td>N/A&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Helm&lt;/td>
+&lt;td>N/A&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Istio&lt;/td>
+&lt;td>N/A&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Istio (Kiali)&lt;/td>
+&lt;td>&lt;a href="https://istio-grafana.example.ca">https://istio-grafana.example.ca&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Istio (Grafana)&lt;/td>
+&lt;td>&lt;a href="https://istio-grafana.example.ca">https://istio-grafana.example.ca&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Open Policy Agent&lt;/td>
+&lt;td>N/A&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Prometheus Operator&lt;/td>
+&lt;td>&lt;a href="https://prometheus.example.ca">https://prometheus.example.ca&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Prometheus Operator (Alert Manager)&lt;/td>
+&lt;td>&lt;a href="https://alertmanager.example.ca">https://alertmanager.example.ca&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Prometheus Operator (Grafana)&lt;/td>
+&lt;td>&lt;a href="https://grafana.example.ca">https://grafana.example.ca&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Terraform&lt;/td>
+&lt;td>N/A&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Velero&lt;/td>
+&lt;td>N/A&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Vault Sidecar Injector&lt;/td>
+&lt;td>N/A&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;ol>
+&lt;li>&lt;strong>Cert Manager&lt;/strong>: Automatic issues and renews HTTPS certificates.&lt;/li>
+&lt;li>&lt;strong>Elastic Stack&lt;/strong>: Logging aggregation stack.&lt;/li>
+&lt;li>&lt;strong>Fluentd&lt;/strong>: Cluster log collector.&lt;/li>
+&lt;li>&lt;strong>Helm&lt;/strong>: Assists you in the application lifecycle of Kubernetes applications.&lt;/li>
+&lt;li>&lt;strong>Istio&lt;/strong>: Service mesh, providing service discovery, traffic handling, mutually-verified encryption, and more.&lt;/li>
+&lt;li>&lt;strong>Open Policy Agent&lt;/strong>: Policy enforcement providing guard rails to platform usage (empowering developers while preventing risk).&lt;/li>
+&lt;li>&lt;strong>Prometheus Operator&lt;/strong>: Cluster and application metric system.&lt;/li>
+&lt;li>&lt;strong>Terraform&lt;/strong>: Infrastructure as Code deployment tool.&lt;/li>
+&lt;li>&lt;strong>Velero&lt;/strong>: Kubernetes-centric backup tool (backup of cluster state and data disks)&lt;/li>
+&lt;li>&lt;strong>Vault Sidecar Injector&lt;/strong>: Inject static and dynamic secrets into an application from the Vault secret manager.&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>&lt;strong>Note:&lt;/strong> The urls provided above are from the management environment but exist in all of the clusters.&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="platform-security">Platform Security&lt;/h3>
+&lt;p>We have started the security assessment process for the Kubernetes platform with the Statistics Canada IT Security team. We have reviewed the Kubernetes CIS benchmarks, the TBS recommended controls and the ITSG-33 controls in general in the development of the platform.&lt;/p>
+&lt;p>This is one of the remaining outstanding tasks that prevent our Kubernetes platfrom from receiving its Protected B certification.&lt;/p>
+&lt;h3 id="horizontal-services">Horizontal Services&lt;/h3>
+&lt;p>We launched and maintained over the past 2 years in our management cluster the foundational Horizontal Services that empower both infrastructure and development teams.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Service&lt;/th>
+&lt;th>URL&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Artifactory&lt;/td>
+&lt;td>&lt;a href="https://artifactory.example.ca">https://artifactory.example.ca&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Confluence&lt;/td>
+&lt;td>&lt;a href="https://confluence.example.ca">https://confluence.example.ca&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GitLab&lt;/td>
+&lt;td>&lt;a href="https://gitlab.example.ca">https://gitlab.example.ca&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Jenkins&lt;/td>
+&lt;td>&lt;a href="https://jenkins.example.ca">https://jenkins.example.ca&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>JetBrains License Server&lt;/td>
+&lt;td>&lt;a href="https://jetbrains-license-server.example.ca">https://jetbrains-license-server.example.ca&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Jira&lt;/td>
+&lt;td>&lt;a href="https://jira.example.ca">https://jira.example.ca&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Octopus&lt;/td>
+&lt;td>&lt;a href="https://octopus.example.ca">https://octopus.example.ca&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Questionnaires&lt;/td>
+&lt;td>&lt;a href="https://questionnaires.example.ca">https://questionnaires.example.ca&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SonarQube&lt;/td>
+&lt;td>&lt;a href="https://sonarqube.example.ca">https://sonarqube.example.ca&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Vault&lt;/td>
+&lt;td>&lt;a href="https://vault.example.ca">https://vault.example.ca&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>XRay&lt;/td>
+&lt;td>&lt;a href="https://xray.example.ca">https://xray.example.ca&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Zap&lt;/td>
+&lt;td>&lt;a href="https://zap.example.ca/zap">https://zap.example.ca/zap&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>For a majority of the above services, we have:&lt;/p>
+&lt;ul>
+&lt;li>Performed a Proof of Concept to ensure the tool meets our needs&lt;/li>
+&lt;li>Participated in the procurement (of non-open source solutions)&lt;/li>
+&lt;li>Written a Concept of Operations&lt;/li>
+&lt;li>Adhered to all Security Controls&lt;/li>
+&lt;li>Provided ongoing configuration and maintenance&lt;/li>
+&lt;li>Automated service deployment utilizing our continuous integration and delivery pipelines (unified workflow)&lt;/li>
+&lt;/ul>
+&lt;p>Each tool is further described here:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>Artifactory&lt;/strong>: Repository for all software artifacts used and created.&lt;/li>
+&lt;li>&lt;strong>Confluence&lt;/strong>: Team workspace for collaboration.&lt;/li>
+&lt;li>&lt;strong>GitLab&lt;/strong>: Source code repository and build system.&lt;/li>
+&lt;li>&lt;strong>JetBrains License Server&lt;/strong>: License server for the JetBrains suite of software.&lt;/li>
+&lt;li>&lt;strong>Jenkins&lt;/strong>: Build system for legacy deployments.&lt;/li>
+&lt;li>&lt;strong>Jira&lt;/strong>: Issue tracking management system.&lt;/li>
+&lt;li>&lt;strong>Octopus&lt;/strong>: Continuous Deployment tool&lt;/li>
+&lt;li>&lt;strong>Questionnaires&lt;/strong>: Drupal-powered webforms system&lt;/li>
+&lt;li>&lt;strong>SonarQube&lt;/strong>: Static code analysis.&lt;/li>
+&lt;li>&lt;strong>Vault&lt;/strong>: Static and dynamic secret management.&lt;/li>
+&lt;li>&lt;strong>XRay&lt;/strong>: Security scanning of artifacts stored in Artifactory.&lt;/li>
+&lt;li>&lt;strong>Zap&lt;/strong>: Security analysis tool for web applications.&lt;/li>
+&lt;/ol>
+&lt;h3 id="continuous-integration-and-continuous-delivery-pipelines">Continuous Integration and Continuous Delivery pipelines&lt;/h3>
+&lt;p>We have developed a series of continuous integration (CI) and continuous delivery (CD) pipelines for the various technologies (Linux, Windows) in use by Statistics Canada. These pipelines have aided projects targeting both Cloud Native and Infrastrucuture as a Service (IaaS) infrastructure.&lt;/p>
+&lt;p>CI/CD pipelines have been developed using Configuration as Code (Gitlab CI/Jenkins and Octopus), and provide isolation to the individual application teams (restricting their permissions).&lt;/p>
+&lt;p>The CD pipeline provides a gated approach to the different Software Development Lifecycle (SDLC) environments, ensuring that an application behaves correctly in Dev, Test, QA before being permitted to deploy to the production environment. Octopus, the CD tool, can also control who is permitted to deploy to the various environments.&lt;/p>
+&lt;p>The Cloud Native team (as well as the whole cloud team) is also using these pipelines in the development of the baseline infrastructure.&lt;/p>
+&lt;h3 id="applications--project-teams">Applications / Project Teams&lt;/h3>
+&lt;p>We have developed and provided common build templates for use by application teams. This provides them with a basic Docker, Helm chart and CI pipeline. Languages include:&lt;/p>
+&lt;ul>
+&lt;li>.NET Framework&lt;/li>
+&lt;li>.NET Core&lt;/li>
+&lt;li>Golang&lt;/li>
+&lt;li>Java&lt;/li>
+&lt;li>NodeJS&lt;/li>
+&lt;li>PHP&lt;/li>
+&lt;li>Python&lt;/li>
+&lt;/ul>
+&lt;p>We've also written documentation to help quickly onboard the new teams and streamlined our onboarding processes to ensure that teams can get quickly started with our platform.&lt;/p>
+&lt;h3 id="daaas">DAaaS&lt;/h3>
+&lt;p>We have supported the DAaaS project by providing them with an isolated Kubernetes cluster (with autoscaling and GPU nodes) to support their investigation and trial of various technical solutions. This includes:&lt;/p>
+&lt;ul>
+&lt;li>JupyterHub&lt;/li>
+&lt;li>Spark&lt;/li>
+&lt;li>Hadoop&lt;/li>
+&lt;li>Kubeflow&lt;/li>
+&lt;li>Pachyderm&lt;/li>
+&lt;li>Databricks&lt;/li>
+&lt;li>Metrics (Prometheus/Grafana)&lt;/li>
+&lt;li>Logging&lt;/li>
+&lt;/ul>
+&lt;p>We've also trained the DAaaS team on Terraform to manage their own Kubernetes environment. We assist them with setup and troubelshooting of their environment.&lt;/p>
+&lt;p>Through the work on DAaaS, we've also assisted other data science workloads onboard to the analytics platform. More specifically, we've assisted with setting up a pipeline to process satelitte imagery.&lt;/p>
+&lt;h3 id="open-source">Open Source&lt;/h3>
+&lt;p>The Kubernetes/Cloud Native platform designed by the Cloud Native team was designed to be based on Open Source tooling. This comes from the Open Source Directive as given by the Treasury Board Secretariat (C.2.3.8) which states where possible, use open standards and open source software first. Additionally, where possible expose all functionality as services (RESTFul) and leverage microservices via a containerized approach (C2.3.10). We are leveraging a microservices design pattern utilizing immutable images through containerization running on Kubernetes with a platform that has been built and open sourced by Statistics Canada.&lt;/p>
+&lt;h4 id="collaboration-across-the-government-of-canada">Collaboration across the Government of Canada&lt;/h4>
+&lt;p>We have collaborated with other Government of Canada departments on the development of our platform. Departments that we've most frequently worked with are the Canadian Digital Services (CDS) and Treasury Board Secretariat (TBS).&lt;/p>
+&lt;p>We have taught two instances of a Kubernetes/Cloud Native Introduction course at the Canada School of Public Service's Digital Academy.&lt;/p>
+&lt;p>And finally, we presented at the Government of Canada Cloud and DevOps conference, Stratosphere, in 2019 on the cloud platform.&lt;/p>
+&lt;h5 id="government-of-canada-enterprise-architecture-review-board-gc-earb">Government of Canada Enterprise Architecture Review Board (GC EARB)&lt;/h5>
+&lt;p>As part of our work with TBS on the Content Management System (CMS) project for a potential replacement of the Canada.ca tech stack, we presented our Kubernetes platform to the GC EARB. The GC EARB endorsed our platform and recommend that it be presented to the One GC council. It also raised interest from other GoC departments to work with us on the platform.&lt;/p>
+&lt;h4 id="industry">Industry&lt;/h4>
+&lt;p>As part of our work on our platform, we have made contacts with industry professionals at Microsoft, IBM and Hashicorp. They have all expressed interest in the platform that we have developed and have offered their support to advancing it.&lt;/p>
+&lt;p>In one of these presentations, Vivian Nobrega, the Open Source Advocate for the Government of Canada, recognized our work on Twitter which was recognized by senior management at Statistics Canada.&lt;/p>
+&lt;h4 id="the-open-community">The Open Community&lt;/h4>
+&lt;p>We are working closely with the open community with our work. We have contributed fixes and improvements to various open source projects that we have investigated/used in the construction of our platform.&lt;/p>
+&lt;p>We also have shared our entire platform on the GC Accelerators, which has been successfuly utilized by others to launch our platform.&lt;/p>
+&lt;p>Provided in the Addendum is the Terraform (Infrastructure as Code) necessarily to install the Azure Kubernetes Service Infrastructure as well as configure with optional platform components (RBAC, Service Mesh, Policies, etc).&lt;/p>
+&lt;p>To highlight that this solution can run on any cloud service provider, we are currently working on support for the IBM Kubernetes Services given in the Addendum.&lt;/p>
+&lt;p>Finally, we are helping organized a Kubernetes Community Days event in Ottawa.&lt;/p>
+&lt;h5 id="kubeconcloud-native-con-north-america-2019">KubeCon/Cloud Native Con North America 2019&lt;/h5>
+&lt;p>3 StatCan employees had an amazing opportunity to attend the KubeCon/Cloud Native Con North America 2019 in San Diego, CA. At the conference, we made many contacts within the Cloud Native field as well as collected lots of information about the tools that we're using.&lt;/p>
+&lt;p>At KubeCon, we discovered the U.S. Department of Defense's cloud platform that shared many similarities with the technologies that we had already chosen. Using this information, we looked at their documentation and are now using it to further advance the platform.&lt;/p>
+&lt;h2 id="addendum">Addendum&lt;/h2>
+&lt;p>Confluence (Internal)&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://confluence.example.ca">Digital Solutions Service Catalogue&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://confluence.example.ca">Platform Team&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://confluence.example.ca">Reading Materials&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://confluence.example.ca">Onboarding to Kubernetes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>PDF&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://govcloud.blob.core.windows.net/docs/azure-aks-platform.pdf">Platform Documentation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://govcloud.blob.core.windows.net/docs/azure-aks-infra.pdf">Azure Reference Architecture&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://govcloud.blob.core.windows.net/docs/digital-academy.pdf">Digital Academy: Cloud Native Development&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Websites&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://govcloud.ca/">Cloud Native Platform for Statistics Canada&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://software.af.mil/dsop/documents/">US Department of Defense DevSecOps&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>YouTube&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.youtube.com/watch?v=QvMWls8OdmM">Digital Academy: Cloud Native Development&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>GitHub (GC Accelerators)&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-aks">Terraform for Kubernetes Infrastructure: Azure&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-aks-platform">Terraform for Kubernetes Platform: Azure&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-iks">Terraform for Kubernetes Infrastructure: IBM&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-iks-platform">Terraform for Kubernetes Platform: IBM&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;strong>Note:&lt;/strong> There are 10+ other supporting repositories.&lt;/p>
+&lt;/blockquote>
+&lt;p>GitLab (Internal)&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://gitlab.example.ca/cloudnative/charts/k8s">Helm Charts&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca/cloudnative">Build Templates&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca/cloudnative">Cloud Native Org&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Blog: Cloud Native Architecture</title><link>https://govcloud.ca/blog/2018/12/18/cloud-native-architecture/</link><pubDate>Tue, 18 Dec 2018 00:00:00 +0000</pubDate><guid>https://govcloud.ca/blog/2018/12/18/cloud-native-architecture/</guid><description>
 &lt;h2 id="cloud-native">Cloud Native&lt;/h2>
 &lt;p>A cloud native application is a distributed, elastic and horizontal scalable system composed of (micro)services which
 isolates state in a minimum of stateful components. The application and each self contained deployment unit of that

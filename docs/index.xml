@@ -1,4 +1,201 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloud Native Platform – Welcome to the Cloud Native Platform</title><link>https://govcloud.ca/docs/</link><description>Recent Hugo news from gohugo.io</description><generator>Hugo -- gohugo.io</generator><image><url>https://govcloud.ca/img/hugo.png</url><title>GoHugo.io</title><link>https://govcloud.ca/docs/</link></image><atom:link href="https://govcloud.ca/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Contributing: Code of conduct</title><link>https://govcloud.ca/contributing/code-of-conduct/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://govcloud.ca/contributing/code-of-conduct/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloud Native Platform – Cloud Native Platform Documentation</title><link>https://govcloud.ca/docs/</link><description>Recent Hugo news from gohugo.io</description><generator>Hugo -- gohugo.io</generator><image><url>https://govcloud.ca/img/hugo.png</url><title>GoHugo.io</title><link>https://govcloud.ca/docs/</link></image><atom:link href="https://govcloud.ca/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Getting Started</title><link>https://govcloud.ca/docs/cloud-native-platform/getting-started/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://govcloud.ca/docs/cloud-native-platform/getting-started/</guid><description>
+&lt;h2 id="pre-requisites">Pre-Requisites&lt;/h2>
+&lt;p>These are the current prerequisite steps required to be able to connect to a Kubernetes cluster (&lt;strong>SDLC&lt;/strong>).&lt;/p>
+&lt;p>This checklist corresponds to what must be met for every member in your project team:&lt;/p>
+&lt;ul>
+&lt;li>A cloud account and corresponding Virtual Machine&lt;/li>
+&lt;li>Assigned a Active Directory group to which access is granted access to a namespace&lt;/li>
+&lt;li>Granted explicit access to our kube context files in GitLab&lt;/li>
+&lt;/ul>
+&lt;h2 id="checklist-to-start-working-in-the-cloud">Checklist to Start Working in the cloud&lt;/h2>
+&lt;ol>
+&lt;li>Request Cloud account : &lt;a href="http://jira.example.ca">http://jira.example.ca&lt;/a>&lt;/li>
+&lt;li>Log-in to Azure Portal: &lt;a href="https://confluence.example.ca">https://confluence.example.ca&lt;/a>&lt;/li>
+&lt;li>Create VM in the cloud: &lt;a href="https://confluence.example.ca">https://confluence.example.ca&lt;/a>&lt;/li>
+&lt;li>Get access to GitLab: &lt;a href="https://confluence.example.ca">https://confluence.example.ca&lt;/a>&lt;/li>
+&lt;li>Get access to Artifactory, and Octopus: &lt;a href="https://artifactory.example.ca,">https://artifactory.example.ca,&lt;/a> &lt;a href="https://octopus.example.ca">https://octopus.example.ca&lt;/a>&lt;/li>
+&lt;li>Connect to the newly created VM: &lt;a href="https://confluence.example.ca">https://confluence.example.ca&lt;/a>&lt;/li>
+&lt;li>VSCode setup : &lt;a href="https://confluence.example.ca">https://confluence.example.ca&lt;/a>&lt;/li>
+&lt;li>Guide To Cloud Native Development - &lt;a href="https://confluence.example.ca">https://confluence.example.ca&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;h2 id="learning">Learning&lt;/h2>
+&lt;p>The official Kubernetes + Docker documentation is quite excellent and should always be your first stop.&lt;/p>
+&lt;p>However we have provided some additional materials below which should provide some additional assistance.&lt;/p>
+&lt;h3 id="beginner">Beginner&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://azure.microsoft.com/en-us/resources/videos/the-illustrated-children-s-guide-to-kubernetes/">Children’s Illustrated guide to Kubernetes&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://azure.microsoft.com/en-us/resources/videos/phippy-goes-to-the-zoo-a-kubernetes-story/">Phippy Goes to the Zoo&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://phippygoestothemountains.github.io/">Phippy and Zee go to the mountains&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://azure.microsoft.com/mediahandler/files/resourcefiles/kubernetes-learning-path/Kubernetes%20Learning%20Path_Version%202.0.pdf">Kubernetes Learning Path&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="intermediate">Intermediate&lt;/h3>
+&lt;ul>
+&lt;li>The Kubernetes Book&lt;/li>
+&lt;li>Kubernetes Up and Running&lt;/li>
+&lt;li>Kubernetes in Action&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>These books are available to you as PDF’s upon request&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="tooling">Tooling&lt;/h2>
+&lt;p>In order to work efficiently with Kubernetes we recommend that you install the following tools:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">kubectl&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://helm.sh/">helm&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://code.visualstudio.com/docs/azure/kubernetes">vscode kubernetes extension&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://govcloud.ca/docs/cloud-native-platform/lens/" title="Lens">Lens&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="kube-contexts">Kube Contexts&lt;/h2>
+&lt;p>If kubectl doesn’t work you are encouraged to check and make sure your kube context file(s) haven’t been changed and / or updated.&lt;/p>
+&lt;h3 id="sdlc">SDLC&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://gitlab.example.ca">k8s-cancentral-01-dev-shared&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">k8s-cancentral-01-test-shared&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">k8s-cancentral-01-production-shared&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="additional-environments">Additional Environments&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://gitlab.example.ca">k8s-cancentral-02-innovation-shared&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">k8s-cancentral-01-management-shared&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>Please note if you are unable to access the links you will need to file a JIRA in order to get yourself added to the repository.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="application-templates">Application Templates&lt;/h2>
+&lt;p>We provide an example repository providing some helpful examples for some of the most common deployments.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://gitlab.example.ca">cloudnative/onboarding/kubernetes-applications-templates&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>The repository provides a Dockerfile and a Helm Chart for a variety of programming languages:&lt;/p>
+&lt;ul>
+&lt;li>dotnet&lt;/li>
+&lt;li>go&lt;/li>
+&lt;li>java&lt;/li>
+&lt;li>nodejs&lt;/li>
+&lt;li>php&lt;/li>
+&lt;li>python&lt;/li>
+&lt;/ul>
+&lt;h2 id="helm-charts">Helm Charts&lt;/h2>
+&lt;p>Most of our project level workloads are deployed via Helm Chart and the repo itself is set to public so you can learn from real world examples.&lt;/p>
+&lt;p>All of the secrets and custom values (overrides) are stored in the CD solution which is why this repository is allowed to
+be public.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/statcan/charts">statcan/charts&lt;/a> (public)&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">cloudnative/charts&lt;/a> (internal)&lt;/li>
+&lt;/ul>
+&lt;h2 id="what-is-helm">What is Helm?&lt;/h2>
+&lt;p>Helm is the official package manager for Kubernetes. It helps you define, install, and even upgrade even the most complex Kubernetes applications with ease.&lt;/p>
+&lt;p>If you deploy applications to Kubernetes, Helm makes it easy to version those deployments, package them, make a release, and then deploy, upgrade, and even rollback those deployments.&lt;/p>
+&lt;h3 id="key-benefits">Key Benefits&lt;/h3>
+&lt;ul>
+&lt;li>Official Kubernetes package manager&lt;/li>
+&lt;li>Reproducible builds of your application&lt;/li>
+&lt;li>Intelligent management of manifest files&lt;/li>
+&lt;li>Manage and version releases&lt;/li>
+&lt;/ul>
+&lt;h3 id="why-teams-love-helm">Why Teams Love Helm&lt;/h3>
+&lt;p>Application teams love Helm because it helps project teams:&lt;/p>
+&lt;p>&lt;strong>Manage Complexity:&lt;/strong> Charts describe even the most complex application, providing repeatable application installation, and serve as the sole single point of authority.&lt;/p>
+&lt;p>&lt;strong>Easy Updates:&lt;/strong> Charts take the pain out of updates with in place upgrades and even custom hooks.&lt;/p>
+&lt;p>&lt;strong>Simple Sharing:&lt;/strong> Charts are incredibly easy to version, share, and host on public and / or private server.&lt;/p>
+&lt;h3 id="terminology">Terminology&lt;/h3>
+&lt;p>&lt;strong>Helm Charts:&lt;/strong> Helm uses a packaging format called charts. A chart is a collection of files that describe a releated set of Kubernetes resources. A single chart might be used to deploy something like a Nginx service or even something far more complicated like a full deployment of a &lt;strong>COTS&lt;/strong> product.&lt;/p>
+&lt;p>&lt;strong>Helm Repositories:&lt;/strong> At a high level, a chart repository is a location where packaged charts can be stored and shared. Most of Statistics Canada Helm Charts are stored in the Artifactory Helm repository:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://artifactory.example.ca">Artifactory&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="oci-image-pipeline">OCI Image Pipeline&lt;/h2>
+&lt;p>&lt;img src="../images/cloudnative/pipeline.png" alt="Pipeline" title="Pipeline">&lt;/p>
+&lt;p>We provide an opinionated automated pipeline that builds OCI images from Dockerfiles using kaniko. This pipeline provides linting via optional components such as Dockle, Hadolint, and Trivy.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://gitlab.example.ca">kaniko-image-ci&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>This pipeline follows a versioning and CI methodology that is closely linked to a GitOps model. The state of the git repository and its versioning are the canonical state of the images produced and later run in the &lt;strong>SDLC&lt;/strong>.&lt;/p>
+&lt;h2 id="flows">Flows&lt;/h2>
+&lt;p>This pipeline defines three flows related to the type of git object:&lt;/p>
+&lt;ul>
+&lt;li>master&lt;/li>
+&lt;li>branches&lt;/li>
+&lt;li>tags&lt;/li>
+&lt;/ul>
+&lt;p>The flows work best for a repository with linear feature-branch based development with periodic releases of milestones.&lt;/p>
+&lt;p>However these flows can easily be change to suite other workflows by overriding the jobs.&lt;/p>
+&lt;h3 id="master">Master&lt;/h3>
+&lt;p>On the master branch, the image is built, scanned, linted, and then pushed to a container registory.&lt;/p>
+&lt;p>&lt;img src="../images/cloudnative/flowmaster.png" alt="Master" title="Master">&lt;/p></description></item><item><title>Docs: Cloud Native Charter</title><link>https://govcloud.ca/docs/cloud-native-platform/charter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://govcloud.ca/docs/cloud-native-platform/charter/</guid><description>
+&lt;h2 id="summary">Summary&lt;/h2>
+&lt;h3 id="what-is-the-cloud-native-team">What is the Cloud Native Team?&lt;/h3>
+&lt;p>The Cloud Native team is a modernization initiative part of the larger Cloud Services Enablement Project (CSEP). We investigate, design, develop and operate modern infrastructure systems powered by cloud-first designs and open source software that enable project teams to develop, deploy, and operate applications in a secure, flexible and inter-operable fashion.&lt;/p>
+&lt;h2 id="objectives">Objectives&lt;/h2>
+&lt;p>We have three primary objectives:&lt;/p>
+&lt;p>&lt;strong>To design and build a cross-cloud platform for application teams.&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>The platform enables built-in security, logging, monitoring and observability of applications with little to no effort from the application teams using different technology stacks.&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;strong>To assist application teams with modernizing their applications for a cloud native environment.&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>This includes moving applications towards a more distributed and resilient micro-services architecture. The goal of the team is to become less hands-on and more architectural guidance for application teams.&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;strong>To deliver and develop applications more rapidly and in a secure manner.&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>This is possible due to the reduced surface area application developers need to concern themselves with while inheriting the baked in security and unified promotion of workloads from development to production. Cloud Native technologies are constantly evolving, and it's the Cloud Native team's responsibility to continue to monitor, investigate, and adapt to those trends.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="ethos--vision">Ethos / Vision&lt;/h2>
+&lt;p>The Cloud Native team investigates and makes new technologies available to application teams. Longer-term, the vision is to enable development teams to be fully self sufficient, moving our support from &amp;ldquo;hands-on&amp;rdquo; towards &amp;ldquo;trouble assistance&amp;rdquo;.&lt;/p>
+&lt;h2 id="goals">Goals&lt;/h2>
+&lt;p>Provide a highly-available cloud infrastructure platform.&lt;/p>
+&lt;p>Provide core services to applications which enable faster development cycles by implementing solutions to common requirements:&lt;/p>
+&lt;ul>
+&lt;li>Request handling (TLS, routing, etc.)&lt;/li>
+&lt;li>Logging&lt;/li>
+&lt;li>Monitoring&lt;/li>
+&lt;/ul>
+&lt;p>We strive for the use of technologies belonging to the Cloud Native Computing Foundation (CNCF) and/or Open Source Software wherever possible.&lt;/p>
+&lt;p>The work performed by the team should be Open Sourced by default, except where this would violate Government of Canada or Statistics Canada policies.&lt;/p>
+&lt;h2 id="out-of-scope">Out of Scope&lt;/h2>
+&lt;p>As established / approved by the &lt;a href="https://confluence.example.ca">Cloud Technical Review Committee (CTRC)&lt;/a> through the document on cloud computing, the final destination for various computing workloads are targeted for the Cloud Native environment, with the exception of:&lt;/p>
+&lt;ul>
+&lt;li>.NET Framework&lt;/li>
+&lt;li>IIS&lt;/li>
+&lt;li>SAS Workloads&lt;/li>
+&lt;li>WinForms&lt;/li>
+&lt;/ul>
+&lt;p>Many of the above technologies we can indeed run but other considerations such as current availability, timelines, and priority may have come into play.&lt;/p>
+&lt;h2 id="governance">Governance&lt;/h2>
+&lt;p>Governance actively assesses and manages the risks associated with the mission program throughout the lifecycle. Governance activities do not stop after Authority to Operate (ATO) but continue throughout the software lifecycle, including operations and monitoring. DevSecOps can facilitate and automate many governance activities.&lt;/p>
+&lt;h2 id="roles">Roles&lt;/h2>
+&lt;p>The following are the most common types of users that will interact with a Kubernetes cluster:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>Cloud Native Team (Developers / Administrators)&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>Users that are responsible to do administrative or developmental tasks on the cluster along with the platform services. This includes operations like upgrading the cluster or creating the resources/workloads on the cluster.&lt;/p>
+&lt;/blockquote>
+&lt;ol start="2">
+&lt;li>&lt;strong>Project Teams&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>Users that are granted namespace level permissions for their projects and tasked with the successful operation of their application once it is successfully on-boarded through CI/CD.&lt;/p>
+&lt;/blockquote>
+&lt;ol start="3">
+&lt;li>&lt;strong>End Users&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>Users that access the applications deployed on our Kubernetes cluster. Access restrictions for these users are managed by the applications themselves.&lt;/p>
+&lt;/blockquote>
+&lt;p>The Cloud Native team consists primarily of developers along with several administrators who strive to assist both the project teams and end users of the platform. Developers will primarily be tasked the operation and maintenance of platform level components while Administrators will be concerned with the operation and maintenance of the Clusters themselves. It is a requirement though that all members train and assist the on-boarding for the priority project teams.&lt;/p>
+&lt;p>This is in addition to creating and improving our documentation to assist subsequent teams who might not have direct involvement by us.&lt;/p>
+&lt;p>There are a few caveats to the above which can result in additional roles being given to team members (should they be willing):&lt;/p>
+&lt;p>Maintain the suite of Horizontal Services whose administration currently falls under our purview.&lt;/p>
+&lt;p>We work closely with the CI/CD team which is slowly taking on more responsibilities.&lt;/p>
+&lt;p>We work closely with the Data Analytics as a Service team.&lt;/p>
+&lt;p>We often provide and consult with the greater Cloud Service Enablement Project (CSEP) team assisting with departmental initiatives.&lt;/p>
+&lt;h2 id="decision-making">Decision Making&lt;/h2>
+&lt;p>Decisions related to application onboarding onto the Kubernetes clusters (SDLC) is done at the weekly CTRC meetings, guided by the business assessment Q&amp;amp;A and as prioritized by the OCIO.&lt;/p>
+&lt;p>For platform functionality, decisions are made by the team as a whole, guided by the requirements of application teams and lead by the lead technical resources of the project.&lt;/p>
+&lt;h2 id="off-ramp">Off-Ramp&lt;/h2>
+&lt;p>Things change, priorities get optimized, life happens. Having an easy on and off ramp is important to this team. If a lead needs to take an extended absence or leave the team, a shadow would be offered the lead position prior to seeking a lead elsewhere.&lt;/p>
+&lt;p>Therefore moving from shadow to lead and vice versa should be made as simply as possible by continued communications from this team about its members, roles, successes, and failures.&lt;/p></description></item><item><title>Docs: Coding Guidelines</title><link>https://govcloud.ca/docs/handbook/standard-operating-procedures/coding-guidelines/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://govcloud.ca/docs/handbook/standard-operating-procedures/coding-guidelines/</guid><description/></item><item><title>Docs: Terms of Reference</title><link>https://govcloud.ca/docs/handbook/technical-advisory-group/terms-of-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://govcloud.ca/docs/handbook/technical-advisory-group/terms-of-reference/</guid><description/></item><item><title>Contributing: Code of conduct</title><link>https://govcloud.ca/contributing/code-of-conduct/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://govcloud.ca/contributing/code-of-conduct/</guid><description>
 &lt;h2 id="cncf-community-code-of-conduct-v10">CNCF Community Code of Conduct v1.0&lt;/h2>
 &lt;p>Other languages available:&lt;/p>
 &lt;ul>
@@ -116,192 +313,445 @@ is only to be used by admins.&lt;/p>
 &lt;p>The &lt;a href="../code-of-conduct/">CNCF Code of Conduct&lt;/a> applies throughout the
 project, and includes all communication mediums.&lt;/p>
 &lt;hr>
-&lt;p>Except as otherwise noted, the content of this page is licensed under the &lt;a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License&lt;/a>, and code samples are licensed under the &lt;a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License&lt;/a>.&lt;/p></description></item><item><title>Docs: Hardening Containers</title><link>https://govcloud.ca/docs/devsecops/hardening-containers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://govcloud.ca/docs/devsecops/hardening-containers/</guid><description>
+&lt;p>Except as otherwise noted, the content of this page is licensed under the &lt;a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License&lt;/a>, and code samples are licensed under the &lt;a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License&lt;/a>.&lt;/p></description></item><item><title>Docs: Lens</title><link>https://govcloud.ca/docs/cloud-native-platform/lens/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://govcloud.ca/docs/cloud-native-platform/lens/</guid><description>
 &lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>Following the creation of the DevSecOps Initiative, this document was created to detail the Container Hardening Process to ensure it meets the &lt;a href="#cybersecurity-requirements">Hardened Containers Cybersecurity Requirements&lt;/a>.&lt;/p>
-&lt;p>To check our public repository, please check: &lt;strong>not yet publicly available&lt;/strong>&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Note&lt;/strong>: This document focuses on container security. It is understood that any application code or library must be scanned by static/dynamic code analysis tools prior to being integrated into a container and must pass those scans.&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="architecture-and-definitions">Architecture and Definitions&lt;/h2>
-&lt;h3 id="hardened-containers-hc">Hardened Containers (HC)&lt;/h3>
-&lt;p>A hardened container is an Open Container Image (OCI) compliant image that is secured and made compliant with the &lt;a href="#cybersecurity-requirements">Hardened Containers Cybersecurity Requirements&lt;/a>. Container images should adhere to the OCI Image Format Specification to ensure portability whenever possible.&lt;/p>
-&lt;h3 id="hardened-container-team-hct">Hardened Container Team (HCT)&lt;/h3>
-&lt;p>The Hardened Container Team is responsible for the assessing and hardening of containers. The team is composed of DevOps Engineers and other container experts that have knowledge of the product being hardened and that understand the &lt;a href="#cybersecurity-requirements">Hardened Containers Cybersecurity Requirements&lt;/a>. A single team member is called a Hardener.&lt;/p>
-&lt;p>A Hardener will require the following:&lt;/p>
+&lt;p>&lt;img src="../images/cloudnative/lens.png" alt="Lens" title="Lens">&lt;/p>
+&lt;h3 id="what-is-lens">What is Lens?&lt;/h3>
+&lt;p>Lens provides the full situational awareness for everything that runs in Kubernetes. It's lowering the barrier of entry for people just getting started and radically improving productivity for people with more experience.&lt;/p>
 &lt;ul>
-&lt;li>Expertise in OCI compliant container images, including writing compliant Dockerfile(s)&lt;/li>
-&lt;li>Expertise in the &lt;a href="#cybersecurity-requirements">Hardened Containers Cybersecurity Requirements&lt;/a>&lt;/li>
-&lt;li>Good understanding of &lt;a href="https://jfrog.com/artifactory">jFrog Artifactory&lt;/a> / &lt;a href="https://jfrog.com/artifactory">XRay&lt;/a> (Private) and &lt;a href="https://github.com/aquasecurity/trivy">Trivy&lt;/a> (Public)&lt;/li>
+&lt;li>&lt;a href="https://github.com/lensapp/lens">lensapp/lens&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;h3 id="container-factory-cf">Container Factory (CF)&lt;/h3>
-&lt;p>To automate the Hardening Process, Statistics Canada has stood up a DevSecOps platform to setup the Continuous Integration/Continuous Delivery (CI/CD) pipeline leveraged to automate the container hardening process. An open source implementation of this platform is in the work using GitHub Actions and open source tooling such as &lt;a href="https://github.com/aquasecurity/trivy">Trivy&lt;/a>.&lt;/p>
-&lt;h3 id="centralized-container-source-code-repository-ccscr">Centralized Container Source Code Repository (CCSCR)&lt;/h3>
-&lt;p>To store the Hardened Containers and any additional relevant documentation a source code repository has been centrally hosted so Hardeners can store their code and leverage an automated CI/CD pipeline. To see how to on-board your containers into CCSCR, please consult our documentation.&lt;/p>
-&lt;p>&lt;a href="https://gitlab.example.ca/cloudnative/contributor-onboarding">https://gitlab.example.ca/cloudnative/contributor-onboarding&lt;/a>&lt;/p>
-&lt;h3 id="centralized-artifacts-repository-car">Centralized Artifacts Repository (CAR)&lt;/h3>
-&lt;p>To store the Hardened Containers, a centralized artifacts repository is being leveraged on a GoC Approved Cloud certified Protected B which provides access to the Hardened Containers.&lt;/p>
-&lt;p>The artifact repository supports both files (traditional artifacts) and containers along with a container registry itself. In addition, the artifacts repository provides a secure mechanism to store, track, and sign, and distribute approved containers.&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Note&lt;/strong>: Currently we leverage &lt;a href="https://jfrog.com/artifactory">jFrog Artifactory&lt;/a> as our approved centralized Artifacts Repository.&lt;/p>
-&lt;/blockquote>
-&lt;h3 id="approved-cicd-orchestration-solution-accos">Approved CI/CD Orchestration Solution (ACCOS)&lt;/h3>
-&lt;p>To build a proper CI/CD pipeline, an orchestration solution is needed along with the appropriate set of guard rails built right in. Currently one of the approved solutions is comprised of tools such as Jenkins, GitLab, Artifactory / XRay and SonarQube. All of which will be containerized and offered in a hardened variant.&lt;/p>
-&lt;h3 id="base-container-image-approved-sources-bcias">Base Container Image Approved Sources (BCIAS)&lt;/h3>
-&lt;p>To ensure container base images are sourced from approved sources, a container base image must be downloaded from a Container Base Image Approved Source.&lt;/p>
-&lt;p>Please check the &lt;a href="#selecting-the-container-base-image">Selecting the container base image&lt;/a> section of this document to understand how to select your base image.&lt;/p>
-&lt;p>The following sources are currently approved and should be used in order of priority:&lt;/p>
-&lt;p>&lt;strong>Trusted&lt;/strong>&lt;/p>
+&lt;h3 id="key-features">Key Features&lt;/h3>
+&lt;p>Lens provides a wealth of improvements to both usability and end user experience over standard kubectl.&lt;/p>
 &lt;ul>
-&lt;li>Centralized Artifacts Repository (CAR) (trusted)&lt;/li>
+&lt;li>Unified, secure, multi-cluster management&lt;/li>
+&lt;li>Real-time cluster state visualization&lt;/li>
+&lt;li>Resource utilization charts and trends with history&lt;/li>
+&lt;li>Prometheus integration&lt;/li>
+&lt;li>Smart terminal access to nodes and containers&lt;/li>
+&lt;li>RBAC security is preserved&lt;/li>
+&lt;li>Port Forwarding&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Untrusted&lt;/strong>&lt;/p>
+&lt;h3 id="sanity-checks">Sanity Checks&lt;/h3>
+&lt;p>Before you can successfully use Lens you should verify with kubectl that you have the appropriate access.&lt;/p>
+&lt;p>Since often times you might only have access to your project groups individual namespace it is imperative that you always pass your namespace as a parameter to kubectl.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">&lt;span style="color:#8f5902;font-style:italic"># List all of the pods in your namespace&lt;/span>
+&amp;gt; kubectl get po -n &amp;lt;namespace&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="kube-contexts">Kube Contexts&lt;/h2>
+&lt;p>If kubectl doesn’t work you are encouraged to check and make sure your kube context file(s) haven’t been changed and / or updated.&lt;/p>
 &lt;ul>
-&lt;li>Product Vendor proprietary repository (untrusted)&lt;/li>
-&lt;li>Docker Hub (untrusted)&lt;/li>
-&lt;li>Red Hat Container Repository (untrusted)&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">k8s-cancentral-01-dev-shared&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">k8s-cancentral-01-test-shared&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">k8s-cancentral-01-production-shared&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;blockquote>
-&lt;p>&lt;strong>Note&lt;/strong>: A Product Vendor repository can only be used if a Memorandum of Understanding (MOU) is signed between the GoC and the vendor to ensure access to base images and their updates.&lt;/p>
-&lt;/blockquote>
-&lt;p>A trusted repository means that the containers were already hardened by the Hardening team and can be used as is.&lt;/p>
-&lt;h2 id="container-hardening-process">Container Hardening Process&lt;/h2>
-&lt;h3 id="selecting-the-container-base-image">Selecting the container base image&lt;/h3>
-&lt;p>When selecting the appropriate container base image to leverage the key recommendations provided below will be followed.&lt;/p>
+&lt;p>Please note if you are unable to access the links you will need to file a JIRA in order to get yourself added to the repository.&lt;/p>
+&lt;h2 id="accessible-namespaces">Accessible Namespaces&lt;/h2>
+&lt;p>After confirming that your kubectl is working and if you only have granted access to individual namespaces (which is likely the case) you should tell Lens the
+individual namespaces. You can access this setting under cluster settings by right clicking your cluster icon.&lt;/p>
+&lt;h2 id="active-directory">Active Directory&lt;/h2>
+&lt;p>In general Active Directory groups are what is used to grant users access to our Kubernetes SDLC environments.&lt;/p>
+&lt;p>Very rarely do we ever assign individual access and when requesting other users to have access to their individual project level namespace we ask that you always provide the Azure AD group name and / or object id of that group in the JIRA ticket.&lt;/p>
+&lt;p>All of these mappings are controlled through terraform in the following repositories though access to these repositories are limited.&lt;/p>
 &lt;ul>
-&lt;li>Always prioritize the use of the base image from its vendor or its open source community so you can be directly coupled with their updates. If you need to enhance the file, just create a Dockerfile which uses the base image with the FROM instruction.&lt;/li>
-&lt;li>Modify, if need be, the FROM instruction so the Dockerfile uses a GoC hardened base container image whenever available. For example, if an application uses the Docker Hub JDK image, ensure the FROM instruction is replaced by the hardened JDK base image instead.&lt;/li>
-&lt;li>Use base images that reuse the &amp;ldquo;closest&amp;rdquo; hardened image available to inherit its hardening: for example, if you use a Java application, use the base image of GoC hardened JDK and not the GoC hardened OS so you inherit all the hardened code of JDK as well and don’t have to re-harden JDK.&lt;/li>
-&lt;li>If you have multiple source options/tags/variants for your base image, ensure you scan them with either jFrog XRay (private) and/or Trivy (public) to understand security risks associated with each image and select the image most closely aligned with GoC &lt;a href="#cybersecurity-requirements">Hardened Containers Cybersecurity Requirements&lt;/a>.&lt;/li>
-&lt;li>If the base image has security flaws, first try using it as a base image in your own Dockerfile and mitigating the flaw by overriding. If that is impossible, you will have to fork the base image and remove the library/issue used to pass scan results or simply accept its risk.&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">k8s-cancentral-01-dev&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">k8s-cancentral-01-test&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">k8s-cancentral-01-production&lt;/a>&lt;/li>
 &lt;/ul>
+&lt;h2 id="frequently-asked-questions">Frequently Asked Questions&lt;/h2>
+&lt;p>Question: Lens isn’t working correctly and/or I am having some unexpected errors&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;strong>Note:&lt;/strong>: It is highly recommended to have the GoC Enterprise DevSecOps team review and agree of the selection of a base image.&lt;/p>
+&lt;p>You should always make sure you are using the latest release of Lens which can be found at the following address: &lt;a href="https://github.com/lensapp/lens/releases">https://github.com/lensapp/lens/releases&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;h3 id="process">Process&lt;/h3>
-&lt;p>It is important to understand that containers will inherit many security controls of the underlying PaaS solution, assuming the underlying host OS has been hardened per agency specific security guidelines (see Appendix A).&lt;/p>
-&lt;p>When selecting a base image and/or hardening a container image there are a few best practice guidelines prior to leveraging the &lt;a href="#appendix-b">Hardening Pipeline&lt;/a>.&lt;/p>
-&lt;p>It is important to select the proper base images, see instructions above &lt;a href="#selecting-the-container-base-image">Selecting the container base image&lt;/a>.&lt;/p>
-&lt;p>Using the &lt;a href="#container-factory">Container Factory&lt;/a> he Hardener will start the hardening process (&lt;a href="#appendix-b">Hardening Pipeline&lt;/a>) utilizing the following steps:&lt;/p>
+&lt;p>Question: An error similar to cannot connect to localhost:8080 is present&lt;/p>
+&lt;blockquote>
+&lt;p>This error likely means you have linked to an incorrect or outdated kube config file and you should check to make sure you have the latest file.&lt;/p>
+&lt;/blockquote>
+&lt;p>Question: Cannot list namespaces/pods&lt;/p>
+&lt;blockquote>
+&lt;p>You have likely not configured the accessible namespaces under your cluster settings for Lens.&lt;/p>
+&lt;/blockquote>
+&lt;p>Question: I would like to grant access to my namespace to other users&lt;/p>
+&lt;blockquote>
+&lt;p>You will have to file a JIRA specifying the Azure Active Directory group that contains the user you wish to be given access to your namespace.&lt;/p>
+&lt;/blockquote></description></item><item><title>Docs: Auditing and Logging</title><link>https://govcloud.ca/docs/cloud-native-platform/logging/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://govcloud.ca/docs/cloud-native-platform/logging/</guid><description>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>The Cloud Native platform on AKS continuously inventories all system components, monitors the performance and security of all components, and logs application and system events.&lt;/p>
+&lt;p>The process starts with application logging, compute resource monitoring, storage monitoring, network monitoring, security monitoring, and data monitoring at the Kubernetes pod level. Each application will need to determine how it is divided into subsystems, the number of subsystems, and the specific monitoring mechanisms within the subsystems. The security tools within each subsystem (e.g., the Sidecar Container Security Stack) will aggregate and forward the event logs gathered from monitoring to a locally centralized aggregated logs database on the platform.&lt;/p>
+&lt;p>It is important to highlight that this is entirely automated within the Kubernetes cluster. The aggregated logs will be further forwarded to the chosen cloud logging platform (Azure Log Analytics) after passing the program application configured log filter. The program’s local log analysis capability will analyze the aggregated logs and generate alerts and reports.&lt;/p>
+&lt;p>&lt;img src="../images/cloudnative/loggingarch.png" alt="Architecture" title="Architecture">&lt;/p>
+&lt;p>Created and Open Sourced Terraform modules:&lt;/p>
 &lt;ul>
-&lt;li>Create a new folder in the CCSCR with the vendor name (hashicorp)&lt;/li>
-&lt;li>Under the vendor create a new folder in the CCSCR with the product name (vault)&lt;/li>
-&lt;li>If a product has multiple variants (cli, daemon, x86, x64) various sub folders are created for each variant&lt;/li>
-&lt;li>Define and list which version of the product, the hardened containers will cover&lt;/li>
-&lt;li>Select a GoC base container image approved source to download the base image from, for each version&lt;/li>
-&lt;li>Each hardened container must also have a README.md, LICENSE.md and CHANGELOG.md file&lt;/li>
-&lt;li>Script to assist the CI/CD process can be provided and will be stored into a sub folder called scripts&lt;/li>
-&lt;li>Documentation can be provided and will be stored into a sub folder called documentation&lt;/li>
-&lt;li>All scanning results from the CI/CD process are to be copied into a sub folder compliance&lt;/li>
-&lt;li>Examples can be added to help with the adoption of the containers by creating an sub folder called examples&lt;/li>
-&lt;li>Any changes in the CCSCR folder always result in files being copied into CAR through the build and scan process folowing the steps above&lt;/li>
+&lt;li>&lt;a href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-audit">terraform-kubernetes-audit&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-fluentd">terraform-kubernetes-fluentd&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-elastic-cloud">terraform-kubernetes-elastic-cloud&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-prometheus">terraform-kubernetes-prometheus&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-istio-operator">terraform-kubernetes-istio-operator&lt;/a>&lt;/li>
 &lt;/ul>
+&lt;p>Auditd will audit all of the container functionality.&lt;/p>
+&lt;p>Fluentd will collect all of the container logs.&lt;/p>
+&lt;p>Elasticsearch stores and search logs leveraging Kibana to visualize them.&lt;/p>
+&lt;p>Prometheus is used for real time metrics along with Alert manager to generate alerts and Grafana for visualizations.&lt;/p>
+&lt;p>Finally Istio will collect all of the network traffic send and recieved by the applications.&lt;/p>
+&lt;h2 id="centralized-logging-platform">Centralized Logging Platform&lt;/h2>
+&lt;p>&lt;img src="../images/cloudnative/loggingmetrics.png" alt="Metrics" title="Metrics">&lt;/p>
+&lt;p>Once processed by the audit pipeline, all logs will be stored into an Elasticsearch environment. Elasticsearch is a search engine which functions well with log content. It also understands the fields in the audit log, allowing for dynamic querying against the entire audit log set.&lt;/p>
+&lt;p>Additionally, through Kibana (or other external tools), any report based on the audit logs can be generated. It is also possible to generate graphs or other visualizations to assist with investigation and/or anomaly detection.&lt;/p>
+&lt;p>For AKS-based clusters, audit logs are stored immediately offloaded and stored in an Azure Storage Account and then processed and sent into an Elasticsearch
+cluster by a specialized container running on the node.&lt;/p>
+&lt;p>For AKS-Engine based cluster, audit logs will be written onto the disk of the master nodes and then processed and sent into an Elasticsearch cluster by a specialized container running on the node.&lt;/p>
+&lt;h2 id="audit-logs">Audit Logs&lt;/h2>
+&lt;p>&lt;img src="../images/cloudnative/loggingverb.png" alt="Logging" title="Logging">&lt;/p>
+&lt;p>Kubernetes auditing provides a securityrelevant chronological set of records documenting the sequence of activities that have affected system by individual users, administrators or other components of the system.&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;strong>Note:&lt;/strong> Since vendors will not get access to CCSCR, they will have to provide acess to continuously updated files which include binaries, the Dockerfile, and various other artifacts such as the README and License file.&lt;/p>
+&lt;p>Auditing logs required as part of any security audit process with internal or external process can be additionally sent to another system for further processing as required.&lt;/p>
 &lt;/blockquote>
-&lt;h3 id="example-of-a-hardened-container-folder-structure">Example of a Hardened Container Folder Structure&lt;/h3>
-&lt;h5 id="centralized-container-source-code-repository-ccscr-1">Centralized Container Source Code Repository (CCSCR):&lt;/h5>
-&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">hashicorp&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>(vendor)&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>README.md&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│───vault&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>(application)&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>README.md&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│───v&lt;span style="color:#0000cf;font-weight:bold">.8&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">.0&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>(application&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>version)&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>README.md&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>LICENSE.md&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>CHANGELOG.md&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>Dockerfile&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>(base&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>approved&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>image)&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│───scripts/&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│───docs/&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│───compliance/&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>└───examples/&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│───v&lt;span style="color:#0000cf;font-weight:bold">.7&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">.9&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>└───v&lt;span style="color:#0000cf;font-weight:bold">.7&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">.8&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h5 id="centralized-artifacts-repository-car-1">Centralized Artifacts Repository (CAR):&lt;/h5>
-&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">hashicorp&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>(vendor)&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>README.md&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│───vault&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>(application)&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>README.md&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│───v&lt;span style="color:#0000cf;font-weight:bold">.1&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">.4&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">.0&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>(application&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>version)&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic">**vault-v.8.0-hardened-container.tgz**&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic">**vault-v.8.0-checksum**&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>README.md&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>LICENSE.md&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>CHANGELOG.md&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>Dockerfile&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>(base&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>approved&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>image)&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│───scripts/&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│───docs/&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│───compliance/&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic">**CI/CD**&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>└───examples/&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>│───v&lt;span style="color:#0000cf;font-weight:bold">.1&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">.3&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">.9&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>│&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>└───v&lt;span style="color:#0000cf;font-weight:bold">.1&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">.3&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">.8&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="automated-hardening-of-new-releases">Automated Hardening of New Releases&lt;/h3>
-&lt;p>The hardening process will be fully automated so that when a new image is released that is detected by the CI/CD pipeline, the pipeline will download any new artifacts/binaries, Dockerfile updates, and run the steps mentioned above, triggered automatically. The pipeline will attempt to search for new base images and automatically run a new hardening pipeline and notify the team if a build fails.&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Note:&lt;/strong> For vendors, we will only ever pull binaries/artifacts from you.&lt;/p>
-&lt;/blockquote>
-&lt;h3 id="third-party-container-sharing">Third Party Container Sharing&lt;/h3>
-&lt;p>Third parties must provide complete Dockerfile and other necessary scripts or artifacts so they can be ingested into the CCSCR.&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Note:&lt;/strong> Docker Binary files will not be accepted if the Dockerfile isn't provided in order for us to replicate the build. The goal is to integrate existing Dockerfile into the Hardening process and the CCSCR so the new containers can benefit from the same automation.&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="hardened-containers-cybersecurity-requirements">Hardened Containers Cybersecurity Requirements&lt;/h2>
-&lt;h3 id="cybersecurity-requirements">Cybersecurity Requirements&lt;/h3>
-&lt;p>&lt;strong>Comply with initial and ongoing GoC Cybersecurity accreditation regulations / frameworks:&lt;/strong>&lt;/p>
+&lt;p>It allows cluster administrator to answer the following questions:&lt;/p>
 &lt;ul>
-&lt;li>Please make sure that the container base OS image that you are using has been hardened&lt;/li>
-&lt;li>Risk Management Framework (RMF) process and required documentation&lt;/li>
-&lt;li>Compliant against the Center for Internet Security (CIS) Docker Benchmark&lt;/li>
-&lt;li>ITSG-33 has minimal guidance so will defer to NIST&lt;/li>
-&lt;li>Leverage both &lt;a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-190.pdf">NIST SP 800-53&lt;/a> moderate controls and &lt;a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-190.pdf">NIST 800-190&lt;/a> as guidance&lt;/li>
+&lt;li>what happened?&lt;/li>
+&lt;li>when did it happen?&lt;/li>
+&lt;li>who initiated it?&lt;/li>
+&lt;li>on what did it happen?&lt;/li>
+&lt;li>where was it observed?&lt;/li>
+&lt;li>from where was it initiated?&lt;/li>
+&lt;li>to where was it going?&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Documentation:&lt;/strong>&lt;/p>
+&lt;p>Additionally here is the list of events for which an audit log will be generated:&lt;/p>
 &lt;ul>
-&lt;li>Generate and automate necessary documentation for Risk Management&lt;/li>
-&lt;li>RMF Controls&lt;/li>
-&lt;li>Data Flows&lt;/li>
+&lt;li>Creating a resource&lt;/li>
+&lt;li>Updating a resource&lt;/li>
+&lt;li>Deleting a resource&lt;/li>
+&lt;li>Accessing a resource&lt;/li>
+&lt;li>Access to a resource (e.g., port-forward or exec)&lt;/li>
 &lt;/ul>
-&lt;p>Enable TLS on all PaaS tools that have UI or send data. HTTP will be disabled and FIPS 140.2 used.&lt;/p>
-&lt;p>Where authentication and authorization is required, leverage GoC ADFS authentication.&lt;/p>
-&lt;p>Whenever possible, prohibit processes and containers from running as root.&lt;/p>
-&lt;h3 id="hardening-container-risk-acceptable">Hardening Container Risk Acceptable&lt;/h3>
-&lt;p>Process created to accept specific risk of a cybersecurity findings that cannot be remediated at the time. This will be evaluated on a case by case basic and handled by the platform authorization officer.&lt;/p>
-&lt;h3 id="active-directory--common-access-card-integration-requirements">Active Directory / Common Access Card Integration Requirements&lt;/h3>
-&lt;p>Active Directory Domain Services (AD DS) provides a centralized, delegated administrative model and single sign-on (SSO) capabilities to an organization. Active Directory stores information about objects on the network and makes this information available for administrators and users to find and use. Active Directory uses a structured data store as the basis for a logical, hierarchical organization of directory information.&lt;/p>
-&lt;p>It is imperative that any Protected B and above environment use MFA authentication for any UI based authentication (such as a backend or dashboard). For Non Person Entity (NPO) such as communication between services, signed certificates can be used and PKI can be leveraged.&lt;/p>
-&lt;p>The Single Sign On (SSO) should be fully integrated with the GoC ADFS that is currently being used.&lt;/p>
-&lt;h2 id="appendix-a">Appendix A&lt;/h2>
-&lt;h3 id="security-control-inheritance-paas--platform-host">Security Control Inheritance (PaaS / Platform Host)&lt;/h3>
-&lt;p>PaaS providers rely on technical concepts such as process isolation, service routing, redundancy, firewall controls, and many other security layers. In practice, these controls typically align with Government security concepts out-of-the-box. At the moment the Government of Canada has certified the following cloud providers as Protected B compliant.&lt;/p>
+&lt;h3 id="audit-logs-content">Audit Logs Content&lt;/h3>
+&lt;p>At a minimmum, audit logs will contain the following information:&lt;/p>
+&lt;h3 id="audit-logs-retention">Audit Logs Retention&lt;/h3>
+&lt;p>The Centralized Logging Platform will retain audit records for 6 months at a minimum in order to provide support for after-the-fact investigations of security incidents and to meet regulatory and organizational information retention requirements. Additionally an automated cron has been setup to remove indexes that are older then 9 months.&lt;/p>
+&lt;p>It should be noted that any index can be backed up and exported from a specific period and / or range a time and then backed up to persistent storage in order to comply with security requirements that these logs be kept for at least two years.&lt;/p>
+&lt;p>Additionally, if required by security requirements for specific requests, the following information may also be added to generated audit logs to provide the full context.&lt;/p></description></item><item><title>Docs: Incident Report</title><link>https://govcloud.ca/docs/handbook/standard-operating-procedures/incident-report/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://govcloud.ca/docs/handbook/standard-operating-procedures/incident-report/</guid><description>
+&lt;p>In the event that an incident is reported most notably from either an email or a JIRA issue. The first thing we must do is access if the incident occurs on a business critical system and / or if this impacts the business clients. The next consideration is whether this falls under our support hours and related SLA's.&lt;/p>
+&lt;p>When an incident does happen on a business critical system then we also have to file an official incident report that is then reviewed by the assistant director and ultimately send to the director himself.&lt;/p>
+&lt;h2 id="csep-incident-report-xxxx20xx">CSEP Incident Report –XX/XX/20XX&lt;/h2>
+&lt;h3 id="incident-report-title">Incident Report Title&lt;/h3>
+&lt;h4 id="incident-description">Incident Description&lt;/h4>
+&lt;p>A brief description of the incident along with any supporting material such as a link to confluence or a JIRA issue.&lt;/p>
+&lt;h4 id="time-summary">Time Summary&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Action&lt;/th>
+&lt;th>Time&lt;/th>
+&lt;th>Date&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Failure Occurred&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Operations Notified&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Operations On-Site&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Second Level Support On-Site&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Services Restored&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="client-impact">Client Impact&lt;/h4>
+&lt;p>Was there any business client impact and if so for how long?&lt;/p>
+&lt;h4 id="incident-resolution">Incident Resolution&lt;/h4>
+&lt;p>When the incident was resolved what were the series of steps that were done. If possible try to describe why this incident should not occur again.&lt;/p>
+&lt;h4 id="what-worked-well">What Worked Well&lt;/h4>
+&lt;p>A brief description or bullet list of what worked well and how the incident resulted in a learning experience. Can talk about the time to solve, whether it was a collaborative effort, and additional understanding gained.&lt;/p>
+&lt;h4 id="what-didnt-work-well">What Didn’t Work Well&lt;/h4>
+&lt;p>A brief description or bullet list of what didn’t work so well and what could be better improved in the future. This should be a succinct summary that discusses the problem objectively.&lt;/p>
+&lt;h4 id="recommendations">Recommendations&lt;/h4>
+&lt;p>A series of recommendations that would in theory prevent the incident from occurring again. This is often given in a series of bulleted items describing concrete steps that can be performed.&lt;/p>
+&lt;h4 id="post-incident-action-items">Post incident action Items&lt;/h4>
+&lt;p>This section is to be filled in by the Assistant Directors. Please leave blank.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>Actions Items&lt;/th>
+&lt;th>Responsibility&lt;/th>
+&lt;th>Priority&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>4&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>5&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Docs: Production Vision</title><link>https://govcloud.ca/docs/cloud-native-platform/vision/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://govcloud.ca/docs/cloud-native-platform/vision/</guid><description>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>Product Vision for Cloud Native Platform&lt;/p>
 &lt;ul>
-&lt;li>Amazon&lt;/li>
-&lt;li>Azure&lt;/li>
-&lt;li>Google&lt;/li>
-&lt;li>IBM&lt;/li>
+&lt;li>Describes the purpose of the Product&lt;/li>
+&lt;li>Provides a common understanding of the direction to move towards&lt;/li>
+&lt;li>Guides and informs decisions regarding the platform&lt;/li>
 &lt;/ul>
-&lt;blockquote>
-&lt;p>&lt;strong>Note&lt;/strong>: While a cloud provider might be protected b compliant it doesn't mean that the various types services offerred are also compliant.&lt;/p>
-&lt;/blockquote>
-&lt;p>It is important to add that additional security overlays provided by the &lt;a href="https://cyber.gc.ca/en/path-enterprise-security">Canadian Center for Cyber Security&lt;/a> and the &lt;a href="https://www.cisecurity.org/controls/">Center for Internet Security controls&lt;/a> should always be leveraged (ITSG-33, CIS, etc) and constantly reassessed on a yearly interval.&lt;/p>
-&lt;p>With a properly locked down hosting environment containers inherit most of the security controls and benefits from infrastructure to host OS level remediation requirements. The focus then shifts to container and application security requirements (i.e. static code analysis, code linting, CVE testing).&lt;/p>
-&lt;h2 id="appendix-b">Appendix B&lt;/h2>
-&lt;h3 id="container-securityremediation-considerations">Container Security/Remediation Considerations&lt;/h3>
-&lt;p>Always automate all container hardening processes leveraging CI/CD pipelines whenever possible. Manual processes should never be used in order to minimize operational concerns.&lt;/p>
-&lt;p>When not using offially supported containers from trusted vendors (jFrog, GitLab, Hashicorp) you should always select a proper base image by following the instructions under the &lt;a href="#selecting-the-container-base-image">Selecting the container base image&lt;/a> section of this document.&lt;/p>
-&lt;p>For example:&lt;/p>
+&lt;p>Helps to answer the following questions:&lt;/p>
 &lt;ul>
-&lt;li>If a container requires a base OS (such as alpine), the hardened base image of this OS must be used&lt;/li>
-&lt;li>If a container needs a JDK such a for a Java application you should consider using a Distroless image&lt;/li>
-&lt;/ul></description></item><item><title>Docs: Getting Help</title><link>https://govcloud.ca/docs/reference/getting-help/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://govcloud.ca/docs/reference/getting-help/</guid><description>
-&lt;h2 id="slack-channel">Slack Channel&lt;/h2>
-&lt;p>The quickest way to get help is to post a question in &lt;a href="https://message.gccollab.ca/">GCCollab&lt;/a> under the &lt;strong>#cloudnative&lt;/strong> channel.&lt;/p>
-&lt;h2 id="raise-a-support-ticket">Raise a support ticket&lt;/h2>
-&lt;p>You can &lt;a href="https://github.com/statcan/">raise a support ticket&lt;/a> as an issue on our GitHub repository.&lt;/p>
-&lt;h2 id="open-hours">Open Hours&lt;/h2>
-&lt;p>We run a monthly &amp;ldquo;open hour&amp;rdquo; the last Friday of every month.&lt;/p>
-&lt;p>These are sessions in which you can discuss anything relating to the cloud platform.&lt;/p></description></item></channel></rss>
+&lt;li>Who is the target audience, the benefits it provides, the key features and the business goals for the organization&lt;/li>
+&lt;li>This guides us in the direction of where we want to be, not necessarily what is available today&lt;/li>
+&lt;/ul>
+&lt;h3 id="anatomy-of-a-product-vision-board">Anatomy of a product vision board&lt;/h3>
+&lt;p>&lt;img src="../images/cloudnative/vision.png" alt="Vision" title="Vision">&lt;/p>
+&lt;p>5 main sections:&lt;/p>
+&lt;ul>
+&lt;li>Target Group (the group most likely to benefit from using the product)&lt;/li>
+&lt;li>Needs (provided benefits, why would someone want to use the product)&lt;/li>
+&lt;li>Product (key features of the product)&lt;/li>
+&lt;li>Business Goals (benefits to the organization)&lt;/li>
+&lt;li>Vision (the goal we want to achieve)&lt;/li>
+&lt;/ul>
+&lt;p>Target Group&lt;/p>
+&lt;ul>
+&lt;li>Encompasses both IT and non-IT users&lt;/li>
+&lt;li>Encompasses the range of solution types (large-scale apps to smaller pieces of a much larger app)&lt;/li>
+&lt;/ul>
+&lt;p>Needs&lt;/p>
+&lt;ul>
+&lt;li>Enable solution builders to have more autonomy over their solutions and enforce the self-serve model&lt;/li>
+&lt;li>Challenges from previous projects included the lack of consistency in infrastructure&lt;/li>
+&lt;li>Environment were slightly different&lt;/li>
+&lt;li>Usually required someone to manually intervene to make adjustments&lt;/li>
+&lt;li>Broad knowledge of the differences was not widely known&lt;/li>
+&lt;li>Bundling the documentation with the solution ensures this vital information is not decoupled&lt;/li>
+&lt;/ul>
+&lt;p>Product&lt;/p>
+&lt;ul>
+&lt;li>Security features on the platform that solutions can benefit from&lt;/li>
+&lt;li>CNCF: well supported community of open source projects&lt;/li>
+&lt;li>Observability: enables a better understanding as to why something went wrong&lt;/li>
+&lt;/ul>
+&lt;p>Business Goals&lt;/p>
+&lt;ul>
+&lt;li>Rather than pay for infrastructure that may sit dormant, it can be targeted when needed&lt;/li>
+&lt;li>Fail fast: solutions could be deployed on Day 0 which enables early realization of success or failure, allowing teams to pivot in the right direction&lt;/li>
+&lt;li>Aligns with the GoC Digital Standards and break the silos within IT (dev and operations)&lt;/li>
+&lt;/ul>
+&lt;p>Vision&lt;/p>
+&lt;ul>
+&lt;li>Highlights the key ideas: reliable, self-service, rapid deployment&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="../images/cloudnative/vision-roadmap.png" alt="Roadmap" title="Roadmap">&lt;/p></description></item><item><title>Docs: Supported Workloads</title><link>https://govcloud.ca/docs/cloud-native-platform/supported-workloads/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://govcloud.ca/docs/cloud-native-platform/supported-workloads/</guid><description>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>Deploy and manage containerized applications with a managed Kubernetes service. Leveraging the Azure Kubernetes Service (AKS) the cloud native team offers serverless Kubernetes, an integrated CI / CD experience while promoting enterprise grade securtiy and governance. Unite your development and operations teams on a single platform to rapidly built, deliver, and scale applications with confidence.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://gcdocs.example.ca">Cloud Native Reference Documents&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://govcloud.ca/docs/cloud-native-platform/charter/" title="Cloud Native Cloud Native Charter">Cloud Native Cloud Native Charter&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://confluence.example.ca">Cloud Native Service Catalogue&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gcdocs.example.ca">Cloud Native Concept of Operations&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="target-selection">Target Selection&lt;/h2>
+&lt;p>The Cloud Native platform is able to run nearly all technologies that are being considered for migration into the cloud environment. Generally, if there is an official Docker container available for a given technology, we can run it.&lt;/p>
+&lt;p>However, we do know there are some nuances with applications of certain workloads that might make it challenging to go to a Kubernetes environment.&lt;/p>
+&lt;p>The following technologies are those that would &lt;strong>NOT&lt;/strong> go to the a Kubernetes environment at this time:&lt;/p>
+&lt;ul>
+&lt;li>.NET Framework&lt;/li>
+&lt;li>Production databases as should be Managed Services&lt;/li>
+&lt;li>SAS&lt;/li>
+&lt;li>GUI-only applications (Win Forms)&lt;/li>
+&lt;/ul>
+&lt;p>This reflects and aligns with the Cloud Assessment Q&amp;amp;A document that was approved at the Cloud Technical Review Committee, which describes the order of consideration for applications.&lt;/p>
+&lt;h2 id="cloud-native-workloads">Cloud Native Workloads&lt;/h2>
+&lt;p>As we mentioned above, we can run basically any technology that has an official Docker image. If you want a more definitive list, here are the technologies that we've already worked with:&lt;/p>
+&lt;ul>
+&lt;li>C/C++&lt;/li>
+&lt;li>PHP&lt;/li>
+&lt;li>Python&lt;/li>
+&lt;li>.NET Core&lt;/li>
+&lt;li>NodeJS / TypeScript&lt;/li>
+&lt;li>Java&lt;/li>
+&lt;li>Golang&lt;/li>
+&lt;/ul>
+&lt;h2 id="sdlc">SDLC&lt;/h2>
+&lt;p>The SDLC (software development lifecycle) environments / Kubernetes clusters that we currently provide for project teams along with full &lt;strong>SLA&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>development&lt;/li>
+&lt;li>test&lt;/li>
+&lt;li>qa&lt;/li>
+&lt;li>prod&lt;/li>
+&lt;/ul>
+&lt;p>Everything is created entirely using infrastructure as code (Terraform) and further SDLC environments can easily be created should the need arise.&lt;/p>
+&lt;p>We do support a few other environments in addition to the core SDLC:&lt;/p>
+&lt;ul>
+&lt;li>inno&lt;/li>
+&lt;li>infratest&lt;/li>
+&lt;li>ingress&lt;/li>
+&lt;li>mgmt&lt;/li>
+&lt;/ul>
+&lt;p>All of our environments have the full authority to operate (ATO).&lt;/p>
+&lt;p>Our SDLC runs on the Azure cloud service provider. We have open sourced both our Azure and IBM C.S.P. templates which reside on the GC Accelerators. Internally at Statistics Canada we make derivatives of the Azure ones for each SDLC and separate out the infrastructure itself from the platform level components.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-aks">terraform-kubernetes-aks&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-aks-platform">terraform-kubernetes-aks-platform&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-iks">terraform-kubernetes-iks&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/canada-ca-terraform-modules/terraform-kubernetes-iks-platform">terraform-kubernetes-iks-platform&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="infrastructure">Infrastructure&lt;/h2>
+&lt;p>The below templates can then be found for their SDLC infrastructure counterparts:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://gitlab.example.ca">terraform-kubernetes-aks-dev&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">terraform-kubernetes-aks-test&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">terraform-kubernetes-aks-qa&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">terraform-kubernetes-aks-prod&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Additional templates for other environments:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://gitlab.example.ca">terraform-kubernetes-aks-inno&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">terraform-kubernetes-aks-infratest&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">terraform-kubernetes-aks-ingress&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">terraform-kubernetes-aks-mgmt&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="platform">Platform&lt;/h2>
+&lt;p>The below templates can then be found for their SDLC infrastructure counterparts:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://gitlab.example.ca">terraform-kubernetes-aks-platform-dev&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">terraform-kubernetes-aks-platform-test&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">terraform-kubernetes-aks-platform-qa&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">terraform-kubernetes-aks-platform-prod&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Additional templates for other environments:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://gitlab.example.ca">terraform-kubernetes-aks-platform-inno&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">terraform-kubernetes-aks-platform-infratest&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">terraform-kubernetes-platform-aks-ingress&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gitlab.example.ca">terraform-kubernetes-aks-platform-mgmt&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="data-science-workloads">Data Science Workloads&lt;/h2>
+&lt;p>If you have a data science related project you might be interested in the &lt;strong>Data Analytics as a Platform&lt;/strong>. This runs Kubernetes under the hood but is tailored for an optimal data science experience using the most popular OSS tools.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/statcan/daaas">statcan/daaas&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/StatCan/terraform-kubernetes-aks-daaas">terraform-kubernetes-aks-daaas&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas">terraform-kubernetes-aks-platform&amp;ndash;daaas&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="service-request">Service Request&lt;/h2>
+&lt;p>The following represent some of the service requests you are able to file to gather assistance from our team:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://jirab.example.ca">Request Support&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jira.example.ca">Request Enhancement&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://confluence.example.ca">Incident Report&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="service-owner">Service Owner&lt;/h2>
+&lt;p>The following are some of the key contacts you might need to be aware of.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Service Owner&lt;/strong>: Andrew Sinkinson&lt;/li>
+&lt;li>&lt;strong>IT Manager&lt;/strong>: Steven Melo&lt;/li>
+&lt;li>&lt;strong>Senior TA&lt;/strong>: William Hearn&lt;/li>
+&lt;/ul>
+&lt;h2 id="service-delivery">Service Delivery&lt;/h2>
+&lt;p>We provide full coverage and SLA for the following environments (Kubernetes clusters):&lt;/p>
+&lt;ul>
+&lt;li>dev&lt;/li>
+&lt;li>test&lt;/li>
+&lt;li>qa&lt;/li>
+&lt;li>prod&lt;/li>
+&lt;li>innovation&lt;/li>
+&lt;li>daaas&lt;/li>
+&lt;/ul>
+&lt;p>Our maintenance window occurs every Tuesday and Thursday from 7:00 pm to 12:00 am.&lt;/p>
+&lt;p>Our core service support hours occur everyday from 8:00 am to 5:00 pm eastern time.&lt;/p>
+&lt;h2 id="change-management">Change Management&lt;/h2>
+&lt;p>Platform-level changes are announced via the cloud maintenance notification process:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://confluence.example.ca">Schedule Maintenance&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Additionally please take a look at our maintenance strategy documentation for an overview of our methodology:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://confluence.example.ca">Maintenance Strategy&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="security">Security&lt;/h2>
+&lt;p>Protected-B (PBLL) Security Compliant with Interim Authority to Operate (ATO):&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://jira.example.ca/browse/XXX-XXXX">XXX-XXXX - Containers CIS Benchmark&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jira.example.ca/browse/XXX-XXXX">XXX-XXXX - Kubernetes CIS Benchmark&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jira.example.ca/browse/XXX-XXXX">XXX-XXXX - Kubernetes / Containers SRTM&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="kubernetes-application-templates">Kubernetes Application Templates&lt;/h2>
+&lt;p>We provide an example repository providing some helpful examples for some of the most common deployments.&lt;/p>
+&lt;p>The repository provides a Dockerfile and a Helm Chart for a variety of programming languages:&lt;/p>
+&lt;ul>
+&lt;li>dotnet&lt;/li>
+&lt;li>go&lt;/li>
+&lt;li>java&lt;/li>
+&lt;li>nodejs&lt;/li>
+&lt;li>php&lt;/li>
+&lt;li>python&lt;/li>
+&lt;/ul>
+&lt;h2 id="helm-charts">Helm Charts&lt;/h2>
+&lt;p>Most of our project level workloads are deployed via Helm Chart and the repo itself is set to public so you can learn from real world examples.&lt;/p>
+&lt;p>All of the secrets and custom values (overrides) are stored in the CD solution which is why this repository is allowed to be public.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/statcan/charts">statcan/charts&lt;/a> (public)&lt;/li>
+&lt;li>&lt;a href="https://github.com/cloudnative/k8s/charts">cloudnative/charts&lt;/a> (internal)&lt;/li>
+&lt;/ul></description></item><item><title>Docs: Getting Help</title><link>https://govcloud.ca/docs/cloud-native-platform/getting-help/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://govcloud.ca/docs/cloud-native-platform/getting-help/</guid><description>
+&lt;h2 id="support">Support&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Request Support&lt;/strong>: &lt;a href="https://jirab.example.ca">Click here&amp;hellip;&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Request Enhancement&lt;/strong>: &lt;a href="https://jirab.example.ca">Click here&amp;hellip;&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Incident Report&lt;/strong>: &lt;a href="https://govcloud.ca/docs/handbook/standard-operating-procedures/incident-report/" title="Template">Template&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Agile&lt;/strong>: &lt;a href="https://jirab.example.ca">Kanban Board&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="coverage">Coverage&lt;/h2>
+&lt;ul>
+&lt;li>Innovation&lt;/li>
+&lt;li>DAaaS&lt;/li>
+&lt;li>Dev&lt;/li>
+&lt;li>Test&lt;/li>
+&lt;li>QA (pending)&lt;/li>
+&lt;li>Production&lt;/li>
+&lt;/ul>
+&lt;h2 id="maintenance-window">Maintenance Window&lt;/h2>
+&lt;ul>
+&lt;li>Tuesday 7PM-12AM&lt;/li>
+&lt;li>Thursday 7PM-12AM&lt;/li>
+&lt;/ul>
+&lt;h2 id="service-availability">Service Availability&lt;/h2>
+&lt;ul>
+&lt;li>24/7 for the platform&lt;/li>
+&lt;/ul></description></item></channel></rss>
