@@ -44,7 +44,7 @@ We have multiple Kubernetes clusters for different environments:
 1. Production
 1. Management: Used for Horizontal Services
 1. Innovation: Used for the rapid prototyping (in days and not months) and evaluation of workloads
-1. DAaaS: Used for data science related workloads
+1. DAS: Used for data science related workloads
 
 We have also experimented running our platform on multiple clouds, including AWS and IBM Cloud.
 
@@ -164,9 +164,9 @@ We have developed and provided common build templates for use by application tea
 
 We've also written documentation to help quickly onboard the new teams and streamlined our onboarding processes to ensure that teams can get quickly started with our platform.
 
-### DAaaS
+### DAS
 
-We have supported the DAaaS project by providing them with an isolated Kubernetes cluster (with autoscaling and GPU nodes) to support their investigation and trial of various technical solutions. This includes:
+We have supported the DAS project by providing them with an isolated Kubernetes cluster (with autoscaling and GPU nodes) to support their investigation and trial of various technical solutions. This includes:
 
 * JupyterHub
 * Spark
@@ -177,9 +177,9 @@ We have supported the DAaaS project by providing them with an isolated Kubernete
 * Metrics (Prometheus/Grafana)
 * Logging
 
-We've also trained the DAaaS team on Terraform to manage their own Kubernetes environment. We assist them with setup and troubelshooting of their environment.
+We've also trained the DAS team on Terraform to manage their own Kubernetes environment. We assist them with setup and troubelshooting of their environment.
 
-Through the work on DAaaS, we've also assisted other data science workloads onboard to the analytics platform. More specifically, we've assisted with setting up a pipeline to process satelitte imagery.
+Through the work on DAS, we've also assisted other data science workloads onboard to the analytics platform. More specifically, we've assisted with setting up a pipeline to process satelitte imagery.
 
 ### Open Source
 

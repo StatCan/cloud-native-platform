@@ -16,7 +16,7 @@ draft: false
 ## Coverage
 
 * Innovation
-* DAaaS
+* DAS
 * Dev
 * Test
 * QA (pending)
