@@ -105,7 +105,7 @@ Additional templates for other environments:
 
 If you have a data science related project you might be interested in the **Data Analytics as a Platform**. This runs Kubernetes under the hood but is tailored for an optimal data science experience using the most popular OSS tools.
 
-* [statcan/daaas](https://github.com/statcan/daaas)
+* [statcan/aaw](https://github.com/statcan/aaw)
 * [terraform-kubernetes-aks-daaas](https://github.com/StatCan/terraform-kubernetes-aks-daaas)
 * [terraform-kubernetes-aks-platform--daaas](https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas)
 
@@ -134,7 +134,7 @@ We provide full coverage and SLA for the following environments (Kubernetes clus
 * qa
 * prod
 * innovation
-* daaas
+* das
 
 Our maintenance window occurs every Tuesday and Thursday from 7:00 pm to 12:00 am.
 
